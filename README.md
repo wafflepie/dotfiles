@@ -1,15 +1,15 @@
 # Wafflepie's dotfiles
 
-Run `dotfiles.sh` and stuff may happen to your computer.
+Run `init.sh` and stuff may happen to your computer.
 
-## Quick install
+## Installation
 
 ```sh
 git clone https://github.com/wafflepie/dotfiles.git ~/.dotfiles
 ~/.dotfiles/init.sh
 ```
 
-Once installed, reinitialize by running `dot`.
+And you're done! Once installed, you can reinitialize from any directory by running `dot`.
 
 ## Credits
 
