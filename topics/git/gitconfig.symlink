@@ -1,0 +1,29 @@
+[include]
+  path = ~/.gitconfig.local
+
+[color]
+  ui = auto
+
+[core]
+  excludesfile = ~/.gitignore
+  quotepath = false
+  editor = vim
+
+[alias]
+  su = stash -u
+
+[apply]
+  whitespace = nowarn
+
+[mergetool]
+  prompt = false
+  keepBackup = false
+
+[difftool]
+  prompt = false
+
+[help]
+  autocorrect = 1
+
+[push]
+  default = simple

@@ -1,0 +1,47 @@
+export DOTFILES=$HOME/.dotfiles
+
+# global path setup
+export PATH="./bin:/usr/local/bin:/usr/local/sbin:$DOTFILES/binaries:$PATH"
+export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
+
+export EDITOR=code
+
+# Stash your environment variables in ~/.localrc. This means they'll stay out
+# of your main dotfiles repository (which may be public, like this one), but
+# you'll have access to them in your scripts.
+if [[ -e ~/.localrc ]]; then
+	source ~/.localrc
+fi
+
+# add each topic folder to fpath so that they can add functions and completion scripts
+for topic_folder in $DOTFILES/topics/*; do
+	if [ -d $topic_folder ]; then fpath=($topic_folder $fpath); fi
+done
+
+# all of our zsh files, -U removes duplicates
+typeset -U config_files
+config_files=($DOTFILES/**/*.zsh)
+
+# load files with the .pre.zsh suffix
+for file in ${(M)config_files:#*/.pre.zsh}
+do
+  source $file
+done
+
+# load all the files without the .pre.zsh and .post.zsh suffixes
+for file in ${${config_files:#*/.pre.zsh}:#*/.post.zsh}
+do
+  source $file
+done
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
+
+# load every .post.zsh file now, such as completions
+for file in ${(M)config_files:#*/.post.zsh}
+do
+  source $file
+done
+
+unset config_files
