@@ -11,6 +11,8 @@
 
 [alias]
   su = stash -u
+  sp = stash pop
+  spf = git stash show -p | git apply && git stash drop
 
 [apply]
   whitespace = nowarn
