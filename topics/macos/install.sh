@@ -54,3 +54,6 @@ defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
 # Disable autocorrect
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Disable press-and-hold for keys in favor of key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
