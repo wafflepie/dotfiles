@@ -30,6 +30,7 @@ brew 'rbenv'
 brew 'roundup'
 brew 'spaceman-diff'
 brew 'spark'
+brew 'thefuck'
 brew 'tree'
 brew 'unrar'
 brew 'wget', args: ['enable-iri']
