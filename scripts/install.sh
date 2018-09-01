@@ -14,7 +14,7 @@ brew update
 
 # Run Homebrew through the Brewfile
 echo "> brew bundle"
-brew bundle
+brew bundle -v
 
 # Find the installers and run them iteratively
 for install in $(find topics -name install.sh); do
