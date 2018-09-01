@@ -294,7 +294,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>269 191 918 494 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>777 134 850 627 0 0 1680 1027 </string>
+	<string>0 64 1680 963 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>721 281 850 627 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -940,12 +940,20 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>8A15894E-1398-46A4-B08C-93D6CDD66BCC</string>
+	<key>NoSyncLastTipTime</key>
+	<real>557306279.59481704</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>557094763.78936601</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>PointerActions</key>
@@ -994,7 +1002,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-08-27T20:34:30Z</date>
+	<date>2018-08-30T07:20:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1013,6 +1021,8 @@
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.2.0</string>
 </dict>
