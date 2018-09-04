@@ -69,7 +69,7 @@
   },
   "window.zoomLevel": 0,
   "gitlens.historyExplorer.enabled": false,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": true,
   "git-autoconfig.configList": [
     {
       "user.email": "vaclav.jancarik@lundegaard.eu",
@@ -84,5 +84,13 @@
   "todo-tree.flat": true,
   "files.associations": {
     "*.symlink": "shellscript"
+  },
+  "todo-tree.defaultHighlight": {
+    "foreground": "green",
+    "type": "none"
+  },
+  "todo-tree.customHighlight": {
+    "TODO": {},
+    "FIXME": {}
   }
 }
