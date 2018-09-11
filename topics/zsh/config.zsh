@@ -19,7 +19,7 @@ plugins=(colorize compleat dirpersist autojump git gulp history cp z jenv)
 
 source $ZSH/oh-my-zsh.sh
 
-fortune
+fortune -a
 
 # https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
 autoload -U up-line-or-beginning-search
