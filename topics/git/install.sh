@@ -1,1 +1,1 @@
-mkdir ~/.gitshots
+mkdir -p ~/.gitshots
