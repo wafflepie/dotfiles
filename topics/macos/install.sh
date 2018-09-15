@@ -63,3 +63,6 @@ defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.dotfile
 
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+# Disable the "Are you sure you want to open this application?" dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
