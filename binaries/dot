@@ -7,31 +7,31 @@ export DOTFILES=$HOME/.dotfiles
 cd $DOTFILES
 
 display_usage_and_exit() {
-	echo "dot -- dotfiles management"
-	echo ""
-	echo "Usage: dot [options]"
-	echo ""
-	echo "Options:"
-	echo "  -e, --edit    Open dotfiles directory for editing"
-	echo "  -h, --help    Show this help message and exit"
-	exit
+  echo "dot -- dotfiles management"
+  echo ""
+  echo "Usage: dot [options]"
+  echo ""
+  echo "Options:"
+  echo "  -e, --edit    Open dotfiles directory for editing"
+  echo "  -h, --help    Show this help message and exit"
+  exit
 }
 
 while test $# -gt 0; do
-	case "$1" in
-		"-h"|"--help")
-			display_usage_and_exit
-			;;
-		"-e"|"--edit")
-			exec "$EDITOR" "$DOTFILES"
-			exit
-			;;
-		*)
-			echo "Invalid option: $1"
-			display_usage_and_exit
-			;;
-	esac
-	shift
+  case "$1" in
+    "-h"|"--help")
+      display_usage_and_exit
+      ;;
+    "-e"|"--edit")
+      exec "$EDITOR" "$DOTFILES"
+      exit
+      ;;
+    *)
+      echo "Invalid option: $1"
+      display_usage_and_exit
+      ;;
+  esac
+  shift
 done
 
 ./scripts/bootstrap.sh
