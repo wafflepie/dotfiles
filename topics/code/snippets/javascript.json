@@ -1,50 +1,50 @@
 {
-	"Export default as named with flow annotation": {
-		"prefix": "fexdn",
-		"body": [
-			"// @flow",
-			"export { default as $1 } from './$1'"
-		]
-	},
-	"Export default as named": {
-		"prefix": "exdn",
-		"body": [
-			"export { default as $1 } from './$1'"
-		]
-	},
-	"Export all with flow annotation": {
-		"prefix": "fexa",
-		"body": [
-			"// @flow",
-			"export * from './$1'"
-		]
-	},
-	"Export all": {
-		"prefix": "exa",
-		"body": [
-			"export * from './$1'"
-		]
-	},
-	"Export default with flow annotation": {
-		"prefix": "fexd",
-		"body": [
-			"// @flow",
-			"export { default } from './$1'"
-		]
-	},
-	"Export default": {
-		"prefix": "exd",
-		"body": [
-			"export { default } from './$1'"
-		]
-	},
-	"React-intl message": {
-		"prefix": "rim",
-		"body": [
-			"$1: {",
-			"  id: '$2.$1',",
-			"  defaultMessage: '$3',",
-			"},"
-		]
-	}
+  "Export default as named with flow annotation": {
+    "prefix": "fexdn",
+    "body": [
+      "// @flow",
+      "export { default as $1 } from './$1'"
+    ]
+  },
+  "Export default as named": {
+    "prefix": "exdn",
+    "body": [
+      "export { default as $1 } from './$1'"
+    ]
+  },
+  "Export all with flow annotation": {
+    "prefix": "fexa",
+    "body": [
+      "// @flow",
+      "export * from './$1'"
+    ]
+  },
+  "Export all": {
+    "prefix": "exa",
+    "body": [
+      "export * from './$1'"
+    ]
+  },
+  "Export default with flow annotation": {
+    "prefix": "fexd",
+    "body": [
+      "// @flow",
+      "export { default } from './$1'"
+    ]
+  },
+  "Export default": {
+    "prefix": "exd",
+    "body": [
+      "export { default } from './$1'"
+    ]
+  },
+  "React-intl message": {
+    "prefix": "rim",
+    "body": [
+      "$1: {",
+      "  id: '$2.$1',",
+      "  defaultMessage: '$3',",
+      "},"
+    ]
+  }
 }

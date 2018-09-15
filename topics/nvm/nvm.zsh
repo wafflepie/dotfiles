@@ -35,9 +35,9 @@ if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(type -f __init_nvm)" = function ]; then
   fi
 
   declare -a __node_commands=(
-		nvm node npm npx yarn
-		$__yarn_commands
-	)
+    nvm node npm npx yarn
+    $__yarn_commands
+  )
 
   echo $__node_commands
 
