@@ -26,13 +26,7 @@ if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(type -f __init_nvm)" = function ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
-  declare -a __node_commands=(nvm node npm npx yarn)
-
-  __yarn_package_json="$HOME/.config/yarn/global/package.json"
-  if [ -s "$__yarn_package_json" ]; then
-    __node_commands+=(`cat "$__yarn_package_json" | jq -r '.dependencies | keys[]' | sed "s/-bin//g"`)
-  fi
-  unset __yarn_package_json
+  declare -a __node_commands=(nvm node npm npx yarn `find ~/.yarn/bin -exec basename {} \;`)
 
   function __init_nvm() {
     for i in "${__node_commands[@]}"; do unalias $i; done
