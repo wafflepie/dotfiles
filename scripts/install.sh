@@ -2,22 +2,12 @@
 
 set -e
 
-# Install homebrew
-if test ! $(which brew); then
-  echo "installing homebrew"
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-# Update homebrew
-echo "> brew update"
-brew update
-
-# Run Homebrew through the Brewfile
-echo "> brew bundle"
-brew bundle -v
-
 # Find the installers and run them iteratively
-for install in $(find topics -name install.sh); do
+for install in $(
+  find topics -name install.pre.sh;
+  find topics -name install.sh;
+  find topics -name install.post.sh;
+); do
   echo "> $install"
   $install
 done
