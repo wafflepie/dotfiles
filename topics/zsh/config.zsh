@@ -10,7 +10,7 @@ POWERLEVEL9K_NVM_FOREGROUND='000'
 POWERLEVEL9K_NVM_BACKGROUND='072'
 POWERLEVEL9K_SHOW_CHANGESET=true
 
-plugins=(colorize compleat dirpersist autojump git gulp history cp z jenv)
+plugins=(colorize compleat git gulp history jenv yarn z)
 
 source $ZSH/oh-my-zsh.sh
 
