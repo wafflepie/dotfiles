@@ -5,11 +5,11 @@ if test ! $(which brew); then
 fi
 
 # Update Homebrew
-echo "> brew update"
+echo "> brew update"
 brew update
 
 # Run Homebrew through the Brewfile, -v means that it won't run silently
-echo "> brew bundle -v --file=$DOTFILES/topics/brew/Brewfile"
+echo "> brew bundle -v --file=$DOTFILES/topics/brew/Brewfile"
 brew bundle -v --file=$DOTFILES/topics/brew/Brewfile
 
 # Upgrade all previously installed CLI apps

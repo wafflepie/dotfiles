@@ -8,6 +8,6 @@ for install in $(
   find topics -name install.sh;
   find topics -name install.post.sh;
 ); do
-  echo "> $install"
+  echo "> $install"
   $install
 done
