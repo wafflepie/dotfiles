@@ -1,9 +1,4 @@
 export ZSH=$HOME/.oh-my-zsh
-
-fpath=($DOTFILES/completions $fpath)
-
-autoload -U $DOTFILES/completions/*(:t)
-
 export ZSH_THEME="powerlevel9k/powerlevel9k"
 
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
