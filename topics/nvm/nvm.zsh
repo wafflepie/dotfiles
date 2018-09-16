@@ -1,5 +1,3 @@
-autoload -U add-zsh-hook
-
 # https://github.com/creationix/nvm#zsh
 load-nvmrc() {
   local node_version="$(nvm version)"
@@ -28,27 +26,19 @@ if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(type -f __init_nvm)" = function ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
-  declare -a __yarn_commands=()
-  
-  if [ -s "$HOME/.config/yarn/global/package.json" ]; then
-    __yarn_commands=`cat "$HOME/.config/yarn/global/package.json" | jq -r '.dependencies | keys[]'`
-  fi
+  declare -a __node_commands=(nvm node npm npx yarn)
 
-  declare -a __node_commands=(
-    nvm node npm npx yarn
-    $__yarn_commands
-  )
+  __yarn_package_json="$HOME/.config/yarn/global/package.json"
+  if [ -s "$__yarn_package_json" ]; then
+    __node_commands+=(`cat "$__yarn_package_json" | jq -r '.dependencies | keys[]' | sed "s/-bin//g"`)
+  fi
+  unset __yarn_package_json
 
   function __init_nvm() {
     for i in "${__node_commands[@]}"; do unalias $i; done
     . "$NVM_DIR"/nvm.sh
 
-    if [[ -f .nvmrc && -r .nvmrc ]]; then
-      nvm use &>/dev/null
-    elif [[ $(nvm version) != $(nvm version default) ]]; then
-      nvm use default &>/dev/null
-    fi
-
+    autoload -U add-zsh-hook
     add-zsh-hook chpwd load-nvmrc
     load-nvmrc
 
