@@ -14,6 +14,7 @@ display_usage_and_exit() {
   echo "Options:"
   echo "  -e, --edit    Open dotfiles directory for editing"
   echo "  -h, --help    Show this help message and exit"
+  echo "  -d, --dump    Updates the Brewfile with all installed packages"
   exit
 }
 
@@ -24,6 +25,10 @@ while test $# -gt 0; do
       ;;
     "-e"|"--edit")
       exec "$EDITOR" "$DOTFILES"
+      exit
+      ;;
+    "-d"|"--dump")
+      brew bundle dump --force --file=$DOTFILES/topics/brew/Brewfile
       exit
       ;;
     *)
