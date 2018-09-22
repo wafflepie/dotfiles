@@ -293,10 +293,12 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>258 239 445 432 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 191 796 486 0 0 1680 1027 </string>
+	<string>269 375 918 394 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>789 1265 850 627 -125 1050 1920 1057 </string>
+	<string>736 231 850 587 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>717 120 850 627 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -869,7 +871,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FiraCode-Regular 12</string>
+			<string>HackNerdFontComplete-Regular 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -938,12 +940,22 @@
 			<string>/Users/waffle</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
+	<integer>0</integer>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
+	<key>NoSyncInstallUtilitiesPackage</key>
+	<true/>
+	<key>NoSyncInstallUtilitiesPackage_selection</key>
+	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
 	<string>8A15894E-1398-46A4-B08C-93D6CDD66BCC</string>
 	<key>NoSyncLastTipTime</key>
-	<real>558440696.440009</real>
+	<real>559325150.76788604</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -966,6 +978,14 @@
 		<string>0008</string>
 		<string>0009</string>
 		<string>0010</string>
+		<string>0011</string>
+		<string>0012</string>
+		<string>0013</string>
+		<string>0014</string>
+		<string>0015</string>
+		<string>0016</string>
+		<string>0017</string>
+		<string>0018</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
@@ -1015,7 +1035,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-12T12:03:45Z</date>
+	<date>2018-09-22T16:05:49Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>

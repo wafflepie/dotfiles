@@ -2,4 +2,5 @@ package foreign-env
 package grc
 package nvm
 package z
+theme bobthefish
 theme default
