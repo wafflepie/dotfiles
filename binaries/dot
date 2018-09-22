@@ -1,10 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 set -e
-
-export DOTFILES=$HOME/.dotfiles
-
-cd $DOTFILES
+export DOTFILES="$HOME/.dotfiles"
+cd "$DOTFILES"
 
 display_usage_and_exit() {
   echo "dot -- dotfiles management"
@@ -28,7 +26,7 @@ while test $# -gt 0; do
       exit
       ;;
     "-d"|"--dump")
-      brew bundle dump --force --file=$DOTFILES/topics/brew/Brewfile
+      brew bundle dump --force --file="$DOTFILES/topics/brew/Brewfile"
       exit
       ;;
     *)
@@ -39,4 +37,4 @@ while test $# -gt 0; do
   shift
 done
 
-./scripts/bootstrap.sh
+./init.sh

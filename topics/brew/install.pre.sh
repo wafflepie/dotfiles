@@ -8,9 +8,11 @@ fi
 echo "> brew update"
 brew update
 
+BREWFILE="$DOTFILES/topics/brew/Brewfile"
+
 # Run Homebrew through the Brewfile, -v means that it won't run silently
-echo "> brew bundle -v --file=$DOTFILES/topics/brew/Brewfile"
-brew bundle -v --file=$DOTFILES/topics/brew/Brewfile
+echo "> brew bundle -v --file=$BREWFILE"
+brew bundle -v --file="$BREWFILE"
 
 # Upgrade all previously installed CLI apps
 echo "> brew upgrade"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 now=$(date +"%Y_%m_%d__%H_%M_%S")
 imagesnap -q -w 3 ~/.gitshots/$now.png &

@@ -1,5 +1,5 @@
-topics/git/gitconfig.local.symlink
-topics/iterm/iterm2_shell_integration.zsh
+topics/git/.gitconfig.local
+topics/iterm/iterm2_shell_integration.fish
 
 # Created by https://www.gitignore.io/api/code,macos
 

@@ -6,5 +6,7 @@ if ! [[ -d "$HOME/.nvm" ]]; then
   source "$NVM_DIR/nvm.sh"
   sleep 3
 
-  nvm install $(cat topics/nvm/nvmrc.symlink)
+  nvm install node
+  nvm use node
+  nvm alias default node
 fi

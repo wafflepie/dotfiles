@@ -1,3 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+export DOTFILES="$HOME/.dotfiles"
+cd "$DOTFILES"
+
 link_file() {
   local src=$1 dst=$2
 
@@ -6,9 +12,9 @@ link_file() {
 
   if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
     if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]; then
-      local currentSrc="$(readlink $dst)"
+      local current_src="$(readlink $dst)"
 
-      if [ "$currentSrc" == "$src" ]; then
+      if [ "$current_src" == "$src" ]; then
         skip=true
       else
 
@@ -16,6 +22,8 @@ link_file() {
         echo "[s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
 
         read -n 1 action
+
+        echo ""
 
         case "$action" in
         o)
@@ -61,25 +69,33 @@ link_file() {
     fi
   fi
 
-  if [ "$skip" != "true" ]; then # "false" or empty
+  if [ "$skip" != "true" ]; then
     parent=$(dirname "$2")
     if [ ! -d "$parent" ]; then
       mkdir -p "$parent"
     fi
 
     ln -s "$1" "$2"
+
     echo "linked $1 to $2"
   fi
 }
 
-install_dotfiles() {
+link_all_files() {
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find -H "$DOTFILES" -maxdepth 3 -name '*.symlink' -not -path '*.git*'); do
-    dst=$(basename "${src%.*}")
-    dst="$HOME/.${dst//+//}"
+  rm -rf "$HOME/.config/fish/functions"
+  ln -s "$DOTFILES/functions" "$HOME/.config/fish/functions"
+
+  for src in $(find -H "$DOTFILES/topics" -maxdepth 2 -name '.*' -not -name ".DS_Store"); do
+    dst=$(basename $src | sed 's/+/\//g')
+    dst="$HOME/$dst"
     link_file "$src" "$dst"
   done
 }
 
-install_dotfiles
+echo "linking symlinks"
+
+link_all_files
+
+echo "symlinks linked"
