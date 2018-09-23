@@ -4,3 +4,6 @@
 [submodule "submodules/git-wtf"]
 	path = submodules/git-wtf
 	url = https://github.com/michaelklishin/git-wtf.git
+[submodule "submodules/rtomayko-dotfiles"]
+	path = submodules/rtomayko-dotfiles
+	url = https://github.com/rtomayko/dotfiles.git
