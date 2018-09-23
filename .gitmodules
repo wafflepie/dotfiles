@@ -7,3 +7,6 @@
 [submodule "submodules/rtomayko-dotfiles"]
 	path = submodules/rtomayko-dotfiles
 	url = https://github.com/rtomayko/dotfiles.git
+[submodule "submodules/git-blame-someone-else"]
+	path = submodules/git-blame-someone-else
+	url = https://github.com/jayphelps/git-blame-someone-else.git
