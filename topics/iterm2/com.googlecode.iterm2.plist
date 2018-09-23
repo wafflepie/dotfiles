@@ -296,7 +296,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>258 239 445 432 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 375 918 394 0 0 1680 1027 </string>
+	<string>428 352 796 486 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>736 231 850 587 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -946,6 +946,8 @@
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallUtilitiesPackage</key>
@@ -1023,7 +1025,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>~/.dotfiles/topics/iterm</string>
+	<string>~/.dotfiles/topics/iterm2</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
