@@ -1,5 +1,12 @@
 
-# Created by https://www.gitignore.io/api/vim,node,maven,macos
+# Created by https://www.gitignore.io/api/vim,node,maven,macos,code
+
+### Code ###
+# Visual Studio Code - https://code.visualstudio.com/
+.settings/
+.vscode/
+tsconfig.json
+jsconfig.json
 
 ### macOS ###
 # General
@@ -136,4 +143,4 @@ tags
 [._]*.un~
 
 
-# End of https://www.gitignore.io/api/vim,node,maven,macos
+# End of https://www.gitignore.io/api/vim,node,maven,macos,code
