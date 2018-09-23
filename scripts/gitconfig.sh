@@ -4,7 +4,7 @@ set -e
 export DOTFILES="$HOME/.dotfiles"
 cd "$DOTFILES"
 
-if ! [ -f "topics/git/.gitconfig.local" ]; then
+if ! [[ -f "topics/git/.gitconfig.local" ]]; then
   echo 'setting up gitconfig'
 
   credential_helper='osxkeychain'
