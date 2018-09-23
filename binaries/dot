@@ -5,15 +5,15 @@ export DOTFILES="$HOME/.dotfiles"
 cd "$DOTFILES"
 
 display_usage_and_exit() {
-  echo "dot -- dotfiles management"
+  echo "dot -- dotfiles maintenance"
   echo ""
   echo "Usage: dot [options]"
   echo ""
   echo "Options:"
-  echo "  -e, --edit    Open dotfiles directory for editing"
+  echo "  -e, --edit    Open the dotfiles directory in an editor"
   echo "  -h, --help    Show this help message and exit"
-  echo "  -d, --dump    Update lists of installed packages"
-  echo "  -c, --chmod   Make all .sh files executable"
+  echo "  -d, --dump    Update lists of installed packages (brew, code)"
+  echo "  -c, --chmod   Fix file permissions in the dotfiles repository"
   exit
 }
 
