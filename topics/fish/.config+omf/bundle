@@ -1,6 +1,8 @@
+package bass
 package foreign-env
 package grc
 package nvm
+package thefuck
 package z
 theme bobthefish
 theme default
