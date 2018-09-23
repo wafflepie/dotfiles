@@ -1,3 +1,6 @@
 [submodule "submodules/jenv"]
 	path = submodules/jenv
 	url = https://github.com/gcuisinier/jenv.git
+[submodule "submodules/git-wtf"]
+	path = submodules/git-wtf
+	url = https://github.com/michaelklishin/git-wtf.git
