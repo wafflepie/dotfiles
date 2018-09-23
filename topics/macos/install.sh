@@ -1,6 +1,6 @@
 osascript -e 'tell application "System Preferences" to quit'
 
-# Always boot in verbose mode (not MacOS GUI mode)
+# Always boot in verbose mode (not macOS GUI mode)
 sudo nvram boot-args="-v"
 
 # Restart automatically if the computer freezes
@@ -56,7 +56,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Specify the preferences directory
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.dotfiles/topics/iterm"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.dotfiles/topics/iterm2"
 
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
@@ -73,7 +73,7 @@ defaults write com.apple.dock tilesize -int 48
 # Change minimize/maximize window effect to scale
 defaults write com.apple.dock mineffect -string "scale"
 
-# Minimize windows into their application’s icon
+# Minimize windows into their application's icon
 defaults write com.apple.dock minimize-to-application -bool true
 
 # Enable spring loading for all Dock items
@@ -82,23 +82,23 @@ defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
-# Don’t animate opening applications from the Dock
+# Don't animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
-# Don’t group windows by application in Mission Control
+# Don't group windows by application in Mission Control
 # (i.e. use the old Exposé behavior instead)
 defaults write com.apple.dock expose-group-by-app -bool false
 
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 
-# Don’t show Dashboard as a Space
+# Don't show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
-# Don’t automatically rearrange Spaces based on most recent use
+# Don't automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
 # Remove the auto-hiding Dock delay
