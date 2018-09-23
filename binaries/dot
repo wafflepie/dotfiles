@@ -38,6 +38,7 @@ while test $# -gt 0; do
       find "$DOTFILES" -iname "*.fish" -exec chmod +x {} \;
       find "$DOTFILES/functions" -exec chmod +x {} \;
       find "$DOTFILES/binaries" -exec chmod +x {} \;
+      find "$DOTFILES/topics" -iname "*hooks*" -exec chmod +x {} \;
       exit
       ;;
     *)
