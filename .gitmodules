@@ -1,0 +1,3 @@
+[submodule "submodules/jenv"]
+	path = submodules/jenv
+	url = https://github.com/gcuisinier/jenv.git

@@ -4,6 +4,8 @@ set -e
 export DOTFILES="$HOME/.dotfiles"
 cd "$DOTFILES"
 
+git submodule update --init
+
 echo "setting up dotfiles"
 
 . ./scripts/gitconfig.sh
