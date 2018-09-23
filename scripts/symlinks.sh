@@ -84,18 +84,27 @@ link_file() {
 link_all_files() {
   local overwrite_all=false backup_all=false skip_all=false
 
-  rm -rf "$HOME/.config/fish/functions"
-  ln -s "$DOTFILES/functions" "$HOME/.config/fish/functions"
+  files=$(
+    find "$DOTFILES/topics" -name '.*' |
+    grep -v '.DS_Store' |
+    grep -v '.gitignore'
+  )
 
-  for src in $(find -H "$DOTFILES/topics" -maxdepth 2 -name '.*' -not -name ".DS_Store"); do
+  for src in $files; do
     dst=$(basename $src | sed 's/+/\//g')
     dst="$HOME/$dst"
     link_file "$src" "$dst"
   done
+
+  link_file "$DOTFILES/.gitignore" "$HOME/.gitignore"
 }
 
-echo "linking symlinks"
 
+echo "symlinking functions"
+rm -rf "$HOME/.config/fish/functions"
+ln -s "$DOTFILES/functions" "$HOME/.config/fish/functions"
+
+echo "symlinking dotfiles in topics and root .gitignore"
 link_all_files
 
-echo "symlinks linked"
+echo "symlinking done"
