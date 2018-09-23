@@ -12,7 +12,7 @@ display_usage_and_exit() {
   echo "Options:"
   echo "  -e, --edit    Open dotfiles directory for editing"
   echo "  -h, --help    Show this help message and exit"
-  echo "  -d, --dump    Update the Brewfile with all installed packages"
+  echo "  -d, --dump    Update lists of installed packages"
   echo "  -c, --chmod   Make all .sh files executable"
   exit
 }
@@ -28,6 +28,7 @@ while test $# -gt 0; do
       ;;
     "-d"|"--dump")
       brew bundle dump --force --file="$DOTFILES/topics/brew/Brewfile"
+      code --list-extensions > "$DOTFILES/topics/code/extensions.txt"
       exit
       ;;
     "-c"|"--chmod")

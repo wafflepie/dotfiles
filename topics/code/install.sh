@@ -1,6 +1,12 @@
-mkdir -p "$HOME/Library/Application Support/Code/User"
-rm -rf "$HOME/Library/Application Support/Code/User/snippets"
+CODE_HOME="$HOME/Library/Application Support/Code"
 
-ln -sf "$DOTFILES/topics/code/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-ln -sf "$DOTFILES/topics/code/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
-ln -s "$DOTFILES/topics/code/snippets" "$HOME/Library/Application Support/Code/User/snippets"
+mkdir -p "$CODE_HOME/User"
+rm -rf "$CODE_HOME/User/snippets"
+
+ln -sf "$DOTFILES/topics/code/settings.json" "$CODE_HOME/User/settings.json"
+ln -sf "$DOTFILES/topics/code/keybindings.json" "$CODE_HOME/User/keybindings.json"
+ln -s "$DOTFILES/topics/code/snippets" "$CODE_HOME/User/snippets"
+
+for extension in $(cat "$DOTFILES/topics/code/extensions.txt"); do
+  code --install-extension "$extension"
+done
