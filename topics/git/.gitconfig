@@ -1,5 +1,10 @@
-[include]
-  path = ~/.gitconfig.local
+[alias]
+  su = stash -u
+  sp = stash pop
+  spf = git stash show -p | git apply && git stash drop
+
+[apply]
+  whitespace = fix
 
 [color]
   ui = auto
@@ -8,18 +13,13 @@
   excludesfile = ~/.gitignore
   quotepath = false
   editor = vim
+  whitespace = trailing-space
+  trustctime = false
+  precomposeunicode = false
+  untrackedcache = true
 
-[alias]
-  su = stash -u
-  sp = stash pop
-  spf = git stash show -p | git apply && git stash drop
-
-[apply]
-  whitespace = nowarn
-
-[mergetool]
-  prompt = false
-  keepBackup = false
+[diff]
+  mnemonicprefix = true
 
 [difftool]
   prompt = false
@@ -27,8 +27,22 @@
 [help]
   autocorrect = 1
 
-[push]
-  default = simple
+[include]
+  path = ~/.gitconfig.local
 
 [init]
   templatedir = ~/.git-templates
+
+[merge]
+  log = true
+
+[mergetool]
+  prompt = false
+  keepbackup = false
+
+[push]
+  default = simple
+  followtags = true
+
+[rerere]
+  enabled = 1
