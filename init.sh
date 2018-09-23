@@ -4,8 +4,6 @@ set -e
 export DOTFILES="$HOME/.dotfiles"
 cd "$DOTFILES"
 
-chmod -R 755 "$DOTFILES"
-
 echo "setting up dotfiles"
 
 . ./scripts/gitconfig.sh
