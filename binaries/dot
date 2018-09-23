@@ -32,13 +32,11 @@ while test $# -gt 0; do
       exit
       ;;
     "-c"|"--chmod")
-      find "$DOTFILES" -type d -exec chmod 755 {} \;
-      find "$DOTFILES" -type f -exec chmod 644 {} \;
-      find "$DOTFILES" -iname "*.sh" -exec chmod +x {} \;
-      find "$DOTFILES" -iname "*.fish" -exec chmod +x {} \;
-      find "$DOTFILES/functions" -exec chmod +x {} \;
-      find "$DOTFILES/binaries" -exec chmod +x {} \;
-      find "$DOTFILES/topics" -iname "*hooks*" -exec chmod +x {} \;
+      find "$DOTFILES/scripts" -type f -exec chmod +x {} \;
+      find "$DOTFILES/binaries" -type f -exec chmod +x {} \;
+      find "$DOTFILES/functions" -type f -iname "*.fish" -exec chmod +x {} \;
+      find "$DOTFILES/topics" -iname "*.fish" -or -iname "*.sh" -exec chmod +x {} \;
+      find "$DOTFILES/topics" -iname "*hook*" -exec chmod +x {} \;
       exit
       ;;
     *)
