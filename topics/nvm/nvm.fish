@@ -1,4 +1,4 @@
-# https://gist.github.com/eugenet8k/535bf3c51d1fc7c31cb8784e55d4dae4
+# Stolen from https://gist.github.com/eugenet8k/535bf3c51d1fc7c31cb8784e55d4dae4
 
 function __check_nvm --on-variable PWD
     if test -f .nvmrc
