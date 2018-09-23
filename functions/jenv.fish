@@ -1,1 +1,1 @@
-submodules/jenv/fish/jenv.fish
+../submodules/jenv/fish/jenv.fish

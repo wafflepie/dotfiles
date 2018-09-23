@@ -1,1 +1,1 @@
-submodules/jenv/fish/export.fish
+../submodules/jenv/fish/export.fish
