@@ -15,7 +15,6 @@ for file in $DOTFILES/topics/**/*.zsh; do
   fi
 done
 
-. $DOTFILES/topics/zsh/completions.sh
 . ~/.zsh_plugins.sh
 
 for file in $DOTFILES/topics/**/*.post.zsh; do
