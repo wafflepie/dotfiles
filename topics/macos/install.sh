@@ -115,3 +115,6 @@ defaults write com.apple.dock showhidden -bool true
 
 # Make Dock more transparent
 defaults write com.apple.dock hide-mirror -bool true
+
+# Fix blurry font rendering issue in macOS Mojave
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
