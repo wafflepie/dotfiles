@@ -9,9 +9,6 @@ fi
 
 zmodload -i zsh/complist
 
-setopt auto_cd # `cd` by typing directory name if it's not a command
-setopt correct_all # Autocorrect commands
-
 setopt auto_list # Automatically list choices on ambiguous completion
 setopt auto_menu # Automatically use menu completion
 setopt always_to_end # Move cursor to end if word had one match
