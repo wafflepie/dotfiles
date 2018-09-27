@@ -1,1 +1,0 @@
-../submodules/jenv/fish/jenv.fish

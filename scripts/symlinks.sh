@@ -96,10 +96,6 @@ link_all_files() {
   done
 }
 
-echo "symlinking functions"
-rm -rf "$HOME/.config/fish/functions"
-ln -s "$DOTFILES/functions" "$HOME/.config/fish/functions"
-
 echo "symlinking dotfiles in topics"
 link_all_files
 

@@ -1,0 +1,9 @@
+zsh-users/zsh-autosuggestions
+zdharma/fast-syntax-highlighting
+zsh-users/zsh-history-substring-search
+zsh-users/zsh-completions
+buonomo/yarn-completion
+robbyrussell/oh-my-zsh folder:plugins/z
+bhilburn/powerlevel9k
+robbyrussell/oh-my-zsh folder:plugins/thefuck
+lukechilds/zsh-nvm

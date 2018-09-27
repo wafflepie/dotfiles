@@ -7,15 +7,12 @@ dcortes92.FreeMarker
 DigitalBrainstem.javascript-ejs-support
 eamodio.gitlens
 esbenp.prettier-vscode
-flowtype.flow-for-vscode
 Gruntfuggly.save-without-format
 Gruntfuggly.todo-tree
 jpoissonnier.vscode-styled-components
-lunaryorn.fish-ide
 ms-vsliveshare.vsliveshare
 octref.vetur
 PeterJausovec.vscode-docker
 shyykoserhiy.git-autoconfig
-skyapps.fish-vscode
 xabikos.ReactSnippets
 zhouronghui.propertylist

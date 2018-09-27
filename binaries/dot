@@ -12,7 +12,7 @@ display_usage_and_exit() {
   echo "Options:"
   echo "  -e, --edit    Open the dotfiles directory in an editor"
   echo "  -h, --help    Show this help message and exit"
-  echo "  -d, --dump    Update lists of installed packages (brew, code)"
+  echo "  -d, --dump    Update lists of installed packages (brew, code, antibody)"
   echo "  -c, --chmod   Fix file permissions in the dotfiles repository"
   exit
 }
@@ -29,13 +29,13 @@ while test $# -gt 0; do
     "-d"|"--dump")
       brew bundle dump --force --file="$DOTFILES/topics/brew/Brewfile"
       code --list-extensions > "$DOTFILES/topics/code/extensions.txt"
+      antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
       exit
       ;;
     "-c"|"--chmod")
       find "$DOTFILES/scripts" -type f -exec chmod +x {} \;
       find "$DOTFILES/binaries" -type f -exec chmod +x {} \;
-      find "$DOTFILES/functions" -type f -iname "*.fish" -exec chmod +x {} \;
-      find "$DOTFILES/topics" -iname "*.fish" -or -iname "*.sh" -exec chmod +x {} \;
+      find "$DOTFILES/topics" -iname "*.zsh" -or -iname "*.sh" -exec chmod +x {} \;
       find "$DOTFILES/topics" -iname "*hook*" -exec chmod +x {} \;
       exit
       ;;
