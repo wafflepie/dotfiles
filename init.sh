@@ -67,22 +67,15 @@ link_file() {
   fi
 }
 
-link_all_files() {
-  local overwrite_all= backup_all= skip_all=
-
-  for src in $(
-    find "$DOTFILES/topics" -name '.*' |
-    grep -v '.DS_Store' |
-    grep -v '.gitignore'
-  ); do
-    dst=$(basename $src | sed 's/+/\//g')
-    dst="$HOME/$dst"
-    link_file "$src" "$dst"
-  done
-}
-
-link_all_files
-link_file "$DOTFILES/.gitignore" "$HOME/.gitignore"
+for src in $(
+  find "$DOTFILES/topics" -name '.*' |
+  grep -v '.DS_Store' |
+  grep -v '.gitignore'
+); do
+  dst=$(basename $src | sed 's/+/\//g')
+  dst="$HOME/$dst"
+  link_file "$src" "$dst"
+done
 
 for script in $(
   find topics -name '*.pre.sh'
