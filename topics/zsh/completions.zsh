@@ -15,3 +15,4 @@ setopt always_to_end # Move cursor to end if word had one match
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # Matches case insensitive for lowercase
 zstyle ':completion:*' insert-tab pending # Pasting with tabs doesn't perform completion
+zstyle ':completion:*' menu select
