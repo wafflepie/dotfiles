@@ -4,7 +4,7 @@ set -e
 export DOTFILES="$HOME/.dotfiles"
 cd "$DOTFILES"
 
-display_usage_and_exit() {
+display_usage() {
   echo "dot -- dotfiles maintenance"
   echo ""
   echo "Usage: dot [options]"
@@ -12,38 +12,33 @@ display_usage_and_exit() {
   echo "Options:"
   echo "  -e, --edit    Open the dotfiles directory in an editor"
   echo "  -h, --help    Show this help message and exit"
-  echo "  -d, --dump    Update lists of installed packages (brew, code, antibody)"
+  echo "  -d, --dump    Update lists of installed packages"
   echo "  -c, --chmod   Fix file permissions in the dotfiles repository"
-  exit
 }
 
-while test $# -gt 0; do
+if [[ $# > 0 ]]; then
   case "$1" in
     "-h"|"--help")
-      display_usage_and_exit
+      display_usage
       ;;
     "-e"|"--edit")
       exec "$EDITOR" "$DOTFILES"
-      exit
       ;;
     "-d"|"--dump")
       brew bundle dump --force --file="$DOTFILES/topics/brew/Brewfile"
-      code --list-extensions > "$DOTFILES/topics/code/extensions.txt"
-      antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-      exit
+      [[ $(which code) ]] && code --list-extensions > "$DOTFILES/topics/code/extensions.txt"
       ;;
     "-c"|"--chmod")
       find "$DOTFILES/binaries" -type f -exec chmod +x {} \;
       find "$DOTFILES/topics" -iname "*.zsh" -or -iname "*.sh" -exec chmod +x {} \;
       find "$DOTFILES/topics" -iname "*hook*" -exec chmod +x {} \;
-      exit
       ;;
     *)
       echo "Invalid option: $1"
-      display_usage_and_exit
+      display_usage
       ;;
   esac
-  shift
-done
+  exit
+fi
 
 ./init.sh
