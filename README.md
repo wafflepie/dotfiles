@@ -2,12 +2,12 @@
 
 ## Features
 
-- Beautiful terminal and zsh theme
-- Sane macOS defaults optimized for developers
-- Useful binaries, tools, presets and aliases
-- Automatic setup of `brew`, `git`, `nvm`, `jenv` and symlinks
-- Effortless maintenance via the `dot` binary
-- Extremely easy way of adding more config files and tools
+- Beautiful terminal and zsh theme.
+- Sane macOS defaults optimized for developers.
+- Useful binaries, tools, presets and aliases.
+- Automatic setup of `brew`, `git`, `nvm`, `jenv` and symlinks.
+- Effortless maintenance via the `dot` binary.
+- Extremely easy way of adding more config files and tools.
 
 **WARNING:** My dotfiles contain a LOT of stuff, most of which you probably don't need. Instead of using my repository directly, you should do a couple of things:
 
@@ -38,7 +38,6 @@ The structure is built around topics, see [holman's dotfiles](https://github.com
 ```
 .dotfiles/
 ├── binaries      # Useful binaries, explore them!
-├── scripts       # (Re)initialization scripts, also runnable by themselves
 ├── submodules    # Various submodules, I use them as sources for symlinks
 └── topics        # Config files and install scripts organized by topics
 ```

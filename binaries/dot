@@ -33,7 +33,6 @@ while test $# -gt 0; do
       exit
       ;;
     "-c"|"--chmod")
-      find "$DOTFILES/scripts" -type f -exec chmod +x {} \;
       find "$DOTFILES/binaries" -type f -exec chmod +x {} \;
       find "$DOTFILES/topics" -iname "*.zsh" -or -iname "*.sh" -exec chmod +x {} \;
       find "$DOTFILES/topics" -iname "*hook*" -exec chmod +x {} \;

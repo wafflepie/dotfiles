@@ -1,9 +1,3 @@
-#!/usr/bin/env bash
-
-set -e
-export DOTFILES="$HOME/.dotfiles"
-cd "$DOTFILES"
-
 if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #wafflepie/dotfiles" "/etc/sudoers"; then
   echo "setting up passwordless sudo"
   sudo -v
