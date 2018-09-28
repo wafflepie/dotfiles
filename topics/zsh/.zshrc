@@ -2,7 +2,6 @@
 # zmodload zsh/zprof
 
 export DOTFILES="$HOME/.dotfiles"
-export EDITOR=code
 export TERM='xterm-256color'
 
 export PATH="/usr/local/bin:$PATH"
