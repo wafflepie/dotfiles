@@ -10,21 +10,11 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$DOTFILES/binaries:$PATH"
 export PATH="./bin:$PATH"
 
-for file in $DOTFILES/topics/**/*.pre.zsh; do
-  [[ -f "$file" ]] || break
-  . "$file"
-done
+for file in $(
+  find $DOTFILES/topics -name '*.pre.zsh'
+  find $DOTFILES/topics -name '*.zsh' ! -name '*.pre.zsh' ! -name '*.post.zsh'
+); do source "$file"; done
 
-for file in $DOTFILES/topics/**/*.zsh; do
-  [[ -f "$file" ]] || break
-  if [[ "$file" != *.pre.zsh && "$file" != *.post.zsh ]]; then
-    . "$file"
-  fi
-done
+source ~/.zsh_plugins.sh
 
-. ~/.zsh_plugins.sh
-
-for file in $DOTFILES/topics/**/*.post.zsh; do
-  [[ -f "$file" ]] || break
-  . "$file"
-done
+for file in $(find $DOTFILES/topics -name '*.post.zsh'); do source "$file"; done

@@ -17,9 +17,3 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Fix blurry font rendering issue in macOS Mojave
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
-
-for file in $DOTFILES/topics/macos/*.sh; do
-  if [[ $(basename "$file") != "install.sh" ]]; then
-    . "$file"
-  fi
-done

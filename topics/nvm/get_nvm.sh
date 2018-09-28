@@ -5,7 +5,7 @@ fi
 
 # We always initialize nvm because of other topics, such as yarn/install.sh
 export NVM_DIR="$HOME/.nvm"
-. "$NVM_DIR/nvm.sh"
+source "$NVM_DIR/nvm.sh"
 
 if [[ -n "$__INSTALL_DEFAULT_NODE" ]]; then
   sleep 3

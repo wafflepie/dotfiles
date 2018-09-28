@@ -8,9 +8,9 @@ git submodule update --init
 
 echo "setting up dotfiles"
 
-. ./scripts/gitconfig.sh
-. ./scripts/sudo.sh
-. ./scripts/symlinks.sh
-. ./scripts/install.sh
+source ./scripts/gitconfig.sh
+source ./scripts/sudo.sh
+source ./scripts/symlinks.sh
+source ./scripts/install.sh
 
 echo "dotfiles successfully set up"

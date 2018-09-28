@@ -45,7 +45,7 @@ The structure is built around topics, see [holman's dotfiles](https://github.com
 
 Any file in `/topics` beginning with a dot (such as `/topics/git/.gitconfig`) will be automagically symlinked to your home directory. Use the `+` character to indicate a directory structure. For example, `/topics/git/.git-templates+hooks+post-commit` will be symlinked to `~/.git-templates/hooks/post-commit`
 
-You can add an `install.sh` script to a topic if you need some additional setup upon (re)initialization. You can also name it `install.pre.sh` or `install.post.sh` if you need them to run in some special order.
+You can add an `.sh` script to a topic if you need some additional setup upon (re)initialization. You can also name it `.pre.sh` or `.post.sh` if you need to run the scripts in some special order.
 
 Any `.zsh` files in `/topics` will be automatically sourced in the `.zshrc` file. As with the install scripts, you can use the `.pre.zsh` and `.post.zsh` suffixes to modify the order. The `.post.zsh` files will be loaded AFTER all of the antibody plugins.
 
