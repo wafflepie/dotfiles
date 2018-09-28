@@ -1,7 +1,7 @@
 # NOTE: Uncomment the line below and run `zprof` for profiling
 # zmodload zsh/zprof
 
-export DOTFILES=$HOME/.dotfiles
+export DOTFILES="$HOME/.dotfiles"
 export EDITOR=code
 export TERM='xterm-256color'
 
@@ -9,8 +9,6 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$DOTFILES/binaries:$PATH"
 export PATH="./bin:$PATH"
-
-setopt auto_cd # `cd` by typing directory name if it's not a command
 
 for file in $(
   find $DOTFILES/topics -name '*.pre.zsh'
