@@ -1,7 +1,14 @@
+# NOTE: Uncomment the line below and run `zprof` for profiling
+# zmodload zsh/zprof
+
 export DOTFILES=$HOME/.dotfiles
-export PATH="./bin:$DOTFILES/binaries:/usr/local/bin:/usr/local/sbin:$PATH"
 export EDITOR=code
 export TERM='xterm-256color'
+
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$DOTFILES/binaries:$PATH"
+export PATH="./bin:$PATH"
 
 for file in $DOTFILES/topics/**/*.pre.zsh; do
   [[ -f "$file" ]] || break
