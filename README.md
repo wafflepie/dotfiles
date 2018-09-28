@@ -1,17 +1,15 @@
 # wafflepie/dotfiles
 
-Welcome to my dotfiles! Here are some points to help you decide if they are suitable for you. Do you...
+## Features
 
-- ...want a beautiful terminal?
-- ...need sane macOS defaults optimized for developers?
-- ...desire useful binaries, tools, presets and aliases?
-- ...crave automatic setup of `brew`, `git`, `nvm`, `jenv`, symlinks and more?
-- ...demand effortless maintenance?
-- ...wish to have an easy way of adding more config files and tools?
+- Beautiful terminal and zsh theme
+- Sane macOS defaults optimized for developers
+- Useful binaries, tools, presets and aliases
+- Automatic setup of `brew`, `git`, `nvm`, `jenv` and symlinks
+- Effortless maintenance via the `dot` binary
+- Extremely easy way of adding more config files and tools
 
-Then you've come to the right place!
-
-**WARNING:** My dotfiles contain a lot of stuff, most of which you probably don't need. Instead of using my repository directly, you should do a couple of things:
+**WARNING:** My dotfiles contain a LOT of stuff, most of which you probably don't need. Instead of using my repository directly, you should do a couple of things:
 
 - Create a fork.
 - Review the code. Seriously. You've been warned.
