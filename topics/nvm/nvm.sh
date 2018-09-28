@@ -1,17 +1,17 @@
 if ! [[ -d "$HOME/.nvm" ]]; then
   git clone https://github.com/creationix/nvm.git ~/.nvm
-  __INSTALL_DEFAULT_NODE=true
+  install_default_node=true
 fi
 
 # We always initialize nvm because of other topics, such as yarn/install.sh
 export NVM_DIR="$HOME/.nvm"
 source "$NVM_DIR/nvm.sh"
 
-if [[ -n "$__INSTALL_DEFAULT_NODE" ]]; then
+if [[ -n "$install_default_node" ]]; then
   sleep 3
   nvm install node
   nvm use node
   nvm alias default node
 
-  unset __INSTALL_DEFAULT_NODE
+  unset install_default_node
 fi
