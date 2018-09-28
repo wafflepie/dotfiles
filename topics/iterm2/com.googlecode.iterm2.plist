@@ -512,9 +512,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>110 327 1018 447 0 0 1680 1027 </string>
+	<string>110 491 918 404 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>558 193 850 587 0 0 1680 1027 </string>
+	<string>0 400 850 627 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>717 120 850 627 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -1095,7 +1095,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>HackNerdFontComplete-Regular 12</string>
+			<string>FuraCodeNerdFontComplete-Regular 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1144,6 +1144,8 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
+			<key>Thin Strokes</key>
+			<integer>4</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Unicode Normalization</key>
@@ -1185,7 +1187,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>8A15894E-1398-46A4-B08C-93D6CDD66BCC</string>
 	<key>NoSyncLastTipTime</key>
-	<real>559729077.44173706</real>
+	<real>559816447.98521304</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1220,6 +1222,7 @@
 		<string>0020</string>
 		<string>0021</string>
 		<string>0022</string>
+		<string>0023</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>

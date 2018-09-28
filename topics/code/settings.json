@@ -9,7 +9,7 @@
     "editor.formatOnSave": false
   },
   "calva.lintOnSave": true,
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "FuraCode Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
