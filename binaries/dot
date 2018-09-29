@@ -33,10 +33,10 @@ dot_dump() {
 dot_chmod() {
   for file in $(
     find binaries -type f
-    find topics -iname "*.sh"
-    find topics -iname "*.zsh"
-    find topics -iname "*.dump"
-    find topics -iname "*hook*"
+    find "${directories[@]}" -iname "*.sh"
+    find "${directories[@]}" -iname "*.zsh"
+    find "${directories[@]}" -iname "*.dump"
+    find "${directories[@]}" -iname "*hook*"
   ); do
     chmod +x "$file"
   done
