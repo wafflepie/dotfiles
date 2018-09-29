@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-export DOTFILES="$HOME/.dotfiles"
-cd "$DOTFILES"
-
 display_usage() {
   echo "dot -- dotfiles maintenance"
   echo ""
@@ -22,7 +18,7 @@ if [[ $# > 0 ]]; then
       display_usage
       ;;
     "-e"|"--edit")
-      exec "$EDITOR" "$DOTFILES"
+      e "$DOTFILES"
       ;;
     "-d"|"--dump")
       brew bundle dump --force --file="$DOTFILES/topics/brew/Brewfile"
@@ -41,4 +37,4 @@ if [[ $# > 0 ]]; then
   exit
 fi
 
-./init.sh
+eval "$DOTFILES/init.sh"
