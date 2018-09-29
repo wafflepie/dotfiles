@@ -12,7 +12,7 @@ link_file() {
 
   if [[ -f "$dst" ]] || [[ -d "$dst" ]] || [[ -L "$dst" ]]; then
     if [[ "$overwrite_all" == "" ]] && [[ "$backup_all" == "" ]] && [[ "$skip_all" == "" ]]; then
-      local current_src="$(readlink $dst)"
+      local current_src="$(readlink "$dst")"
 
       if [[ "$current_src" == "$src" ]]; then
         skip=true
@@ -56,7 +56,7 @@ link_file() {
   fi
 
   if [[ "$skip" != "true" ]]; then
-    parent=$(dirname "$2")
+    parent="$(dirname "$2")"
     if [[ ! -d "$parent" ]]; then
       mkdir -p "$parent"
     fi
@@ -70,7 +70,7 @@ link_file() {
 git submodule update --init --recursive
 
 for src in $(find "$DOTFILES/topics" -name '.*' | grep -v '.DS_Store'); do
-  dst=$(basename $src | sed 's/+/\//g')
+  dst="$(basename "$src" | sed 's/+/\//g')"
   dst="$HOME/$dst"
   link_file "$src" "$dst"
 done
