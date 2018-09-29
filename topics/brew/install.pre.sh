@@ -3,7 +3,7 @@ if ! [[ $(which brew) ]]; then
 fi
 
 brew update
-brew bundle -v --file="$DOTFILES/topics/brew/Brewfile"
+brew bundle -v
 brew upgrade
 brew cask upgrade
 brew cleanup

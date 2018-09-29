@@ -1,3 +1,3 @@
-for extension in $(cat "$DOTFILES/topics/code/extensions.txt"); do
+for extension in $(cat extensions.txt); do
   code --install-extension "$extension"
 done
