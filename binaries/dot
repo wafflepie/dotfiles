@@ -124,6 +124,8 @@ run_topic_script() {
 #####################
 
 set -e
+initial_directory="$(pwd)"
+cd "$(dirname "$0")"
 export DOTFILES="$(git rev-parse --show-toplevel)"
 cd "$DOTFILES"
 
@@ -162,4 +164,4 @@ for script in $(
 done
 
 echo "dotfiles successfully initialized"
-cd - > /dev/null
+cd "$initial_directory"
