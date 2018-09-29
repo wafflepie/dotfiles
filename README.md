@@ -23,7 +23,7 @@ These dotfiles are supposed to work on a clean installation of macOS. If they do
 ```sh
 # Replace `wafflepie` with your GitHub username
 git clone --recurse-submodules https://github.com/wafflepie/dotfiles.git ~/.dotfiles
-~/.dotfiles/init.sh
+~/.dotfiles/binaries/dot
 ```
 
 And you're done! Once installed, you can reinitialize from any directory by running `dot`.
