@@ -17,3 +17,7 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Fix blurry font rendering issue in macOS Mojave
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
