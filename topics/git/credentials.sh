@@ -16,5 +16,5 @@ if ! [[ -f "$gitconfig_local_path" ]]; then
     -e "s/USER_NAME/$user_name/g" \
     -e "s/USER_EMAIL/$user_email/g" \
     -e "s/CREDENTIAL_HELPER/$credential_helper/g" \
-    "$DOTFILES/topics/git/template.txt" >> "$gitconfig_local_path"
+    "$DOTFILES/topics/git/template.txt" > "$gitconfig_local_path"
 fi
