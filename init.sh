@@ -67,11 +67,9 @@ link_file() {
   fi
 }
 
-for src in $(
-  find "$DOTFILES/topics" -name '.*' |
-  grep -v '.DS_Store' |
-  grep -v '.gitignore'
-); do
+git submodule update --init --recursive
+
+for src in $(find "$DOTFILES/topics" -name '.*' | grep -v '.DS_Store'); do
   dst=$(basename $src | sed 's/+/\//g')
   dst="$HOME/$dst"
   link_file "$src" "$dst"
