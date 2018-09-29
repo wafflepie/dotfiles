@@ -1,7 +1,10 @@
 # NOTE: Uncomment the line below and run `zprof` for profiling
 # zmodload zsh/zprof
 
+cd "$(readlink ~/.zshrc | xargs dirname)"
 export DOTFILES="$(git rev-parse --show-toplevel)"
+cd - > /dev/null
+
 export TERM='xterm-256color'
 
 export PATH="/usr/local/bin:$PATH"
