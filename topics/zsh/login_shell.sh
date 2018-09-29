@@ -1,9 +1,9 @@
-ZSH_PATH=$(which zsh)
+zsh_path=$(which zsh)
 
-if ! grep -q "$ZSH_PATH" /etc/shells; then
-  echo "$ZSH_PATH" | sudo tee -a /etc/shells
+if ! grep -q "$zsh_path" /etc/shells; then
+  echo "$zsh_path" | sudo tee -a /etc/shells
 fi
 
-if ! [[ "$SHELL" -ef "$ZSH_PATH" ]]; then
-  chsh -s "$ZSH_PATH"
+if ! [[ "$SHELL" -ef "$zsh_path" ]]; then
+  chsh -s "$zsh_path"
 fi
