@@ -1,4 +1,4 @@
-zsh_path=$(which zsh)
+zsh_path="$(which zsh)"
 
 if ! grep -q "$zsh_path" /etc/shells; then
   echo "$zsh_path" | sudo tee -a /etc/shells
