@@ -46,3 +46,6 @@ defaults write com.apple.dock showhidden -bool true
 
 # Make Dock more transparent
 defaults write com.apple.dock hide-mirror -bool true
+
+# Don't show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
