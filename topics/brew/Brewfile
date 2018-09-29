@@ -75,4 +75,5 @@ cask "virtualbox"
 cask "visual-studio-code"
 cask "vlc"
 cask "wireshark"
-mas "Magnet", id: 441258766
+# TODO: Uncomment when https://github.com/mas-cli/mas/issues/164 is resolved
+# mas "Magnet", id: 441258766
