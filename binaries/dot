@@ -35,8 +35,7 @@ dot_chmod() {
     find binaries -type f
     find "${directories[@]}" -iname "*.sh"
     find "${directories[@]}" -iname "*.zsh"
-    find "${directories[@]}" -iname "*.dump"
-    find "${directories[@]}" -iname "*hook*"
+    find "${directories[@]}" -iname "Dumpfile"
   ); do
     chmod +x "$file"
   done
