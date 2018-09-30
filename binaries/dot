@@ -10,24 +10,24 @@ dot_help() {
   echo 'Usage: dot [option] [topics ...]'
   echo ''
   echo 'Options:'
-  echo '  -e, --edit      Open the dotfiles directory in an editor'
-  echo '  -h, --help      Show this help message and exit'
-  echo '  -d, --dump      Update lists of installed packages'
-  echo '  -c, --chmod     Fix file permissions in the dotfiles repository'
+  echo '  -e, --edit          Open the dotfiles directory in an editor'
+  echo '  -h, --help          Display this help message'
+  echo '  -d, --dump          Update lists of installed packages'
+  echo '  -c, --chmod         Fix file permissions in the dotfiles repository'
+  echo '  -a, --archive       Create a tarball based on the root .gitignore private section'
+  echo '  -u, --unarchive     Extract a tarball created using the archive option'
   echo ''
   echo 'Examples:'
-  echo '  dot             Initializes all topics'
-  echo '  dot brew        Initializes the `brew` topic'
-  echo '  dot brew code   Initializes the `brew` and `code` topics'
-  echo '  dot -d brew     Updates the Brewfile with currently installed packages'
-  exit
+  echo '  dot                 Initializes all topics'
+  echo '  dot brew            Initializes the `brew` topic'
+  echo '  dot brew code       Initializes the `brew` and `code` topics'
+  echo '  dot -d brew         Updates the Brewfile with currently installed packages'
 }
 
 dot_dump() {
   for script in $(find "${directories[@]}" -iname "Dumpfile"); do
     run_topic_script "$script";
   done
-  exit
 }
 
 dot_chmod() {
@@ -39,12 +39,33 @@ dot_chmod() {
   ); do
     chmod +x "$file"
   done
-  exit
 }
 
-dot_edit() {
-  e
-  exit
+dot_archive() {
+  local IFS=$'\n'
+  local files=($(awk '/# BEGIN PRIVATE/,/# END PRIVATE/' .gitignore))
+  unset 'files[0]'
+  unset 'files[${#files[@]}]'
+
+  for file in ${files[@]}; do
+    if [[ -e "$file" ]]; then
+      mkdir -p ".tmp_archive/$(dirname "$file")"
+      cp "$file" ".tmp_archive/$file"
+    fi
+  done
+
+  cd .tmp_archive
+  tar -zcvf ../private.tar.gz .
+  cd ..
+  rm -rf .tmp_archive
+}
+
+dot_unarchive() {
+  local archive="${2:-private.tar.gz}"
+
+  if [[ -f "$archive" ]]; then
+    tar -zxf "$archive"
+  fi
 }
 
 link_file() {
@@ -130,7 +151,7 @@ cd "$DOTFILES"
 
 directories=()
 for arg in "$@"; do
-  if [[ "$arg" != -* ]]; then
+  if [[ "$arg" != -* ]] && [[ -d "topics/$arg" ]]; then
     directories+=("topics/$arg")
   fi
 done
@@ -140,10 +161,12 @@ if [[ -z "$directories" ]]; then
 fi
 
 case "$1" in
-  "-h"|"--help") dot_help ;;
-  "-e"|"--edit") dot_edit ;;
-  "-d"|"--dump") dot_dump ;;
-  "-c"|"--chmod") dot_chmod ;;
+  "-h"|"--help") dot_help; exit ;;
+  "-e"|"--edit") e; exit ;;
+  "-d"|"--dump") dot_dump; exit ;;
+  "-c"|"--chmod") dot_chmod; exit ;;
+  "-a"|"--archive") dot_archive; exit ;;
+  "-u"|"--unarchive") dot_unarchive; exit ;;
   *) ;;
 esac
 

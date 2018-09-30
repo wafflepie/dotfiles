@@ -1,5 +1,9 @@
+# BEGIN PRIVATE 
 topics/maven/.m2+settings.xml
 topics/ssh/.ssh+id_rsa
+# END PRIVATE
+
+private.tar.gz
 
 # Created by https://www.gitignore.io/api/vim,code,linux,macos
 
