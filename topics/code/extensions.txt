@@ -8,7 +8,6 @@ dcortes92.FreeMarker
 DigitalBrainstem.javascript-ejs-support
 eamodio.gitlens
 esbenp.prettier-vscode
-Gruntfuggly.save-without-format
 Gruntfuggly.todo-tree
 jpoissonnier.vscode-styled-components
 ms-vsliveshare.vsliveshare
