@@ -2,6 +2,7 @@ clinyong.vscode-css-modules
 CoenraadS.bracket-pair-colorizer
 cospaia.calva-fmt
 cospaia.clojure4vscode
+cospaia.paredit-revived
 dbaeumer.vscode-eslint
 dcortes92.FreeMarker
 DigitalBrainstem.javascript-ejs-support
