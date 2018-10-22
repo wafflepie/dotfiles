@@ -92,5 +92,6 @@
   "todo-tree.customHighlight": {
     "TODO": {},
     "FIXME": {}
-  }
+  },
+  "editor.acceptSuggestionOnCommitCharacter": false
 }
