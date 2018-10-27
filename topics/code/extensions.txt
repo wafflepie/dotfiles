@@ -13,6 +13,7 @@ jpoissonnier.vscode-styled-components
 ms-vsliveshare.vsliveshare
 octref.vetur
 PeterJausovec.vscode-docker
+richie5um2.vscode-sort-json
 shyykoserhiy.git-autoconfig
 xabikos.ReactSnippets
 zhouronghui.propertylist

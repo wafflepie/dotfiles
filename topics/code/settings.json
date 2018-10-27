@@ -2,36 +2,50 @@
   "[handlebars]": {
     "editor.formatOnSave": false
   },
-  "[json]": {
-    "editor.formatOnSave": false
-  },
   "[html]": {
     "editor.formatOnSave": false
   },
+  "[json]": {
+    "editor.formatOnSave": false
+  },
   "calva.lintOnSave": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.fontFamily": "FuraCode Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
+  "eslint.packageManager": "yarn",
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     {
-      "language": "vue",
-      "autoFix": true
+      "autoFix": true,
+      "language": "vue"
     },
     {
-      "language": "html",
-      "autoFix": true
+      "autoFix": true,
+      "language": "html"
     }
   ],
-  "eslint.packageManager": "yarn",
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": false,
+  "files.associations": {
+    "*.symlink": "shellscript"
+  },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
+  "git-autoconfig.configList": [
+    {
+      "user.email": "vaclav.janc@gmail.com",
+      "user.name": "Václav Jančařík"
+    },
+    {
+      "user.email": "vaclav.jancarik@lundegaard.eu",
+      "user.name": "Václav Jančařík"
+    }
+  ],
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
@@ -47,51 +61,38 @@
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": true
   },
+  "gitlens.historyExplorer.enabled": false,
   "gitlens.keymap": "chorded",
+  "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
+  "prettier.disableLanguages": ["json"],
   "prettier.jsxBracketSameLine": true,
   "prettier.printWidth": 100,
+  "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
-  "prettier.semi": false,
-  "prettier.disableLanguages": ["json"],
   "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "**/dist": true,
     "**/.git": true,
-    "**/tmp": true,
-    "**/ios/build": true,
-    "**/android/app/build": true,
+    "**/.nyc_output": true,
     "**/android/.gradle": true,
+    "**/android/app/build": true,
+    "**/bower_components": true,
     "**/coverage": true,
-    "**/.nyc_output": true
+    "**/dist": true,
+    "**/ios/build": true,
+    "**/node_modules": true,
+    "**/tmp": true
   },
-  "window.zoomLevel": 0,
-  "gitlens.historyExplorer.enabled": false,
-  "workbench.editor.showTabs": true,
-  "git-autoconfig.configList": [
-    {
-      "user.email": "vaclav.jancarik@lundegaard.eu",
-      "user.name": "Václav Jančařík"
-    },
-    {
-      "user.email": "vaclav.janc@gmail.com",
-      "user.name": "Václav Jančařík"
-    }
-  ],
-  "javascript.updateImportsOnFileMove.enabled": "never",
-  "todo-tree.flat": true,
-  "files.associations": {
-    "*.symlink": "shellscript"
+  "todo-tree.customHighlight": {
+    "FIXME": {},
+    "TODO": {}
   },
   "todo-tree.defaultHighlight": {
     "foreground": "green",
     "type": "none"
   },
-  "todo-tree.customHighlight": {
-    "TODO": {},
-    "FIXME": {}
-  },
-  "editor.acceptSuggestionOnCommitCharacter": false
+  "todo-tree.flat": true,
+  "window.zoomLevel": 0,
+  "workbench.editor.showTabs": true,
+  "workbench.startupEditor": "welcomePage"
 }
