@@ -1,7 +1,7 @@
 [alias]
   su = stash -u
   sp = stash pop
-  spf = git stash show -p | git apply && git stash drop
+  wipe = clean -dfx
 
 [apply]
   whitespace = fix
