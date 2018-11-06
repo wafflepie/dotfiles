@@ -6,6 +6,9 @@ export DOTFILES="$(git rev-parse --show-toplevel)"
 cd - > /dev/null
 
 export TERM='xterm-256color'
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
