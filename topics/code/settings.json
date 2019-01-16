@@ -94,5 +94,7 @@
   "todo-tree.flat": true,
   "window.zoomLevel": 0,
   "workbench.editor.showTabs": true,
-  "workbench.startupEditor": "welcomePage"
+  "workbench.startupEditor": "welcomePage",
+  "gitlens.views.fileHistory.enabled": false,
+  "gitlens.views.lineHistory.enabled": false
 }
