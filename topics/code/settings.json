@@ -32,7 +32,8 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": false,
   "files.associations": {
-    "*.symlink": "shellscript"
+    "*.symlink": "shellscript",
+    "Dockerfile*": "dockerfile"
   },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
@@ -61,8 +62,9 @@
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": true
   },
-  "gitlens.historyExplorer.enabled": false,
   "gitlens.keymap": "chorded",
+  "gitlens.views.fileHistory.enabled": false,
+  "gitlens.views.lineHistory.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
   "prettier.disableLanguages": ["json"],
@@ -94,7 +96,5 @@
   "todo-tree.flat": true,
   "window.zoomLevel": 0,
   "workbench.editor.showTabs": true,
-  "workbench.startupEditor": "welcomePage",
-  "gitlens.views.fileHistory.enabled": false,
-  "gitlens.views.lineHistory.enabled": false
+  "workbench.startupEditor": "welcomePage"
 }
