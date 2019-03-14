@@ -1,4 +1,5 @@
 [alias]
+  fb = "!f() { git show \"$1\":\"$2\" > \"$2\"; }; f"
   su = stash -u
   sp = stash pop
   wipe = clean -dfx
