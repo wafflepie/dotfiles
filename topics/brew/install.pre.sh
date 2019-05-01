@@ -7,4 +7,3 @@ brew bundle -v
 brew upgrade
 brew cask upgrade
 brew cleanup
-brew prune
