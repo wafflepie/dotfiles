@@ -1,4 +1,5 @@
 akamud.vscode-theme-onedark
+christian-kohler.npm-intellisense
 clinyong.vscode-css-modules
 CoenraadS.bracket-pair-colorizer
 cospaia.calva-fmt
@@ -22,4 +23,6 @@ richie5um2.vscode-sort-json
 shinnn.stylelint
 shyykoserhiy.git-autoconfig
 silvenon.mdx
+VisualStudioExptTeam.vscodeintellicode
+WallabyJs.quokka-vscode
 zhouronghui.propertylist
