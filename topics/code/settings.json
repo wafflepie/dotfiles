@@ -20,6 +20,7 @@
   "editor.formatOnSave": true,
   "editor.gotoLocation.multiple": "goto",
   "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "eslint.packageManager": "yarn",
   "eslint.validate": [
@@ -99,6 +100,7 @@
     "type": "none"
   },
   "todo-tree.flat": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 0,
   "workbench.editor.showTabs": true,
   "workbench.startupEditor": "welcomePage"
