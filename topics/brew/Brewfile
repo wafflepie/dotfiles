@@ -100,4 +100,4 @@ cask "virtualbox"
 cask "visual-studio-code"
 cask "vlc"
 cask "wireshark"
-mas "com.crowdcafe.windowmagnet", id: 441258766
+mas "Magnet", id: 441258766
