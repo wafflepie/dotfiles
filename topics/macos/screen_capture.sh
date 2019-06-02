@@ -1,6 +1,6 @@
 # Save screenshots to the desktop
-directory="${HOME}/Screenshots"
-mkdir -p "$directory"
+directory="${HOME}/Google Drive/Screenshots"
+# mkdir -p "$directory"
 defaults write com.apple.screencapture location -string "$directory"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
