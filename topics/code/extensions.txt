@@ -8,6 +8,7 @@ cospaia.paredit-revived
 dbaeumer.vscode-eslint
 dcortes92.FreeMarker
 DigitalBrainstem.javascript-ejs-support
+DotJoshJohnson.xml
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
 EditorConfig.EditorConfig
