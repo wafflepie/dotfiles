@@ -16,9 +16,10 @@ esbenp.prettier-vscode
 Gruntfuggly.todo-tree
 ithildir.java-properties
 jpoissonnier.vscode-styled-components
+ms-azuretools.vscode-docker
 ms-vsliveshare.vsliveshare
 octref.vetur
-PeterJausovec.vscode-docker
+Prisma.vscode-graphql
 QzSG.kitty-time
 richie5um2.vscode-sort-json
 shinnn.stylelint
