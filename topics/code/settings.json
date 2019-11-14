@@ -14,6 +14,7 @@
   "calva.lintOnSave": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "FuraCode Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
@@ -73,8 +74,7 @@
   "gitlens.views.lineHistory.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
-  "prettier.disableLanguages": ["json"],
-  "prettier.jsxBracketSameLine": true,
+  "prettier.jsxBracketSameLine": false,
   "prettier.printWidth": 100,
   "prettier.semi": false,
   "prettier.singleQuote": true,
@@ -91,17 +91,17 @@
     "**/node_modules": true,
     "**/tmp": true
   },
-  "todo-tree.customHighlight": {
+  "todo-tree.highlights.customHighlight": {
     "FIXME": {},
     "TODO": {}
   },
-  "todo-tree.defaultHighlight": {
+  "todo-tree.highlights.defaultHighlight": {
     "foreground": "green",
     "type": "none"
   },
-  "todo-tree.flat": true,
+  "todo-tree.tree.flat": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 0,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": true,
   "workbench.startupEditor": "welcomePage"
 }
