@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+const puppeteer = require("puppeteer");
+
+(async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+
+  await page.goto("https://www.pivokarlin.cz/");
+
+  console.log(
+    "Pivo Karlín",
+    await page.evaluate(() =>
+      Array.from(
+        document
+          .getElementById("menuModala")
+          .querySelector(".carousel-item:first-child")
+          .querySelectorAll(".row")
+      ).map(row => row.querySelector("p").firstChild.textContent)
+    )
+  );
+
+  await browser.close();
+})();
