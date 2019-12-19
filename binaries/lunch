@@ -12,10 +12,7 @@ const puppeteer = require("puppeteer");
     "Pivo Karlín",
     await page.evaluate(() =>
       Array.from(
-        document
-          .getElementById("menuModala")
-          .querySelector(".carousel-item:first-child")
-          .querySelectorAll(".row")
+        document.querySelectorAll("#menuModala .carousel-item:first-child .row")
       ).map(row => row.querySelector("p").firstChild.textContent)
     )
   );
@@ -23,13 +20,11 @@ const puppeteer = require("puppeteer");
   await page.goto("https://restauraceglobus.cz/poledni-menu/");
 
   console.log(
-    "Restaurace Globus",
+    "Globus",
     await page.evaluate(() => {
       const daysOfWeek = ["Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek"];
 
-      return Array.from(
-        document.querySelector(".entry-content").querySelectorAll("p")
-      )
+      return Array.from(document.querySelectorAll(".entry-content p"))
         .reduce((weeklyMenu, paragraph) => {
           const content = paragraph.firstChild.textContent;
 
