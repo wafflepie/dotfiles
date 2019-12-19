@@ -20,5 +20,35 @@ const puppeteer = require("puppeteer");
     )
   );
 
+  await page.goto("https://restauraceglobus.cz/poledni-menu/");
+
+  console.log(
+    "Restaurace Globus",
+    await page.evaluate(() => {
+      const daysOfWeek = ["Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek"];
+
+      return Array.from(
+        document.querySelector(".entry-content").querySelectorAll("p")
+      )
+        .reduce((weeklyMenu, paragraph) => {
+          const content = paragraph.firstChild.textContent;
+
+          if (daysOfWeek.includes(content)) {
+            return [...weeklyMenu, []];
+          }
+
+          if (weeklyMenu.length) {
+            return [
+              ...weeklyMenu.slice(0, -1),
+              [...weeklyMenu[weeklyMenu.length - 1], content]
+            ];
+          }
+
+          return weeklyMenu;
+        }, [])
+        [new Date().getDay() - 1].map(meal => meal.replace(/\s+/g, " "));
+    })
+  );
+
   await browser.close();
 })();
