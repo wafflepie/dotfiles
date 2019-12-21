@@ -4,35 +4,25 @@ const puppeteer = require("puppeteer");
 
 const restaurants = {
   // ============================== PIVO KARLÍN ==============================
-  async pivoKarlin(browser) {
-    const page = await browser.newPage();
-
+  async "Pivo Karlín"(page) {
     await page.goto("https://www.pivokarlin.cz/");
 
-    console.log(
-      "Pivo Karlín",
-      await page.evaluate(() =>
-        Array.from(
-          document.querySelectorAll(
-            "#menuModala .carousel-item:first-child .row"
-          )
-        ).map(row => row.querySelector("p").firstChild.textContent)
-      )
+    return page.evaluate(() =>
+      Array.from(
+        document.querySelectorAll("#menuModala .carousel-item:first-child .row")
+      ).map(row => row.querySelector("p").firstChild.textContent)
     );
   },
   // ============================== GLOBUS ==============================
-  async globus(browser) {
-    const page = await browser.newPage();
-
+  async Globus(page) {
     await page.goto("https://restauraceglobus.cz/poledni-menu/");
 
-    console.log(
-      "Globus",
-      await page.evaluate(() => {
-        const daysOfWeek = ["Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek"];
+    return page.evaluate(() => {
+      const daysOfWeek = ["Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek"];
 
-        return Array.from(document.querySelectorAll(".entry-content p"))
-          .reduce((weeklyMenu, paragraph) => {
+      return (
+        Array.from(document.querySelectorAll(".entry-content p")).reduce(
+          (weeklyMenu, paragraph) => {
             const content = paragraph.firstChild.textContent;
 
             if (daysOfWeek.includes(content)) {
@@ -47,84 +37,75 @@ const restaurants = {
             }
 
             return weeklyMenu;
-          }, [])
-          [new Date().getDay() - 1].map(meal => meal.replace(/\s+/g, " "));
-      })
-    );
+          },
+          []
+        )[new Date().getDay() - 1] || []
+      ).map(meal => meal.replace(/\s+/g, " "));
+    });
   },
   // ============================== ÉČKO ==============================
-  async ecko(browser) {
-    const page = await browser.newPage();
-
+  async Éčko(page) {
     await page.goto(
       "https://www.prague-catering.cz/provozovny/Kantyna-ECKO/Denni-menu-kantyny-ECKO/"
     );
 
-    console.log(
-      "Éčko",
-      await page.evaluate(() => {
-        let insideMainCourses = false;
+    return page.evaluate(() => {
+      let insideMainCourses = false;
 
-        return Array.from(
-          document.querySelectorAll(".dennimenu tbody tr")
-        ).reduce((menu, row) => {
-          const cell = row.firstChild;
-          const heading =
-            cell.firstChild && cell.firstChild.tagName === "H3"
-              ? cell.firstChild
-              : null;
+      return Array.from(
+        document.querySelectorAll(".dennimenu tbody tr")
+      ).reduce((menu, row) => {
+        const cell = row.firstChild;
+        const heading =
+          cell.firstChild && cell.firstChild.tagName === "H3"
+            ? cell.firstChild
+            : null;
 
-          if (!heading) {
-            if (insideMainCourses) {
-              return [...menu, cell.textContent];
-            }
-
-            return menu;
+        if (!heading) {
+          if (insideMainCourses) {
+            return [...menu, cell.textContent];
           }
 
-          insideMainCourses = heading.textContent.includes("Hlavní");
-
           return menu;
-        }, []);
-      })
-    );
+        }
+
+        insideMainCourses = heading.textContent.includes("Hlavní");
+
+        return menu;
+      }, []);
+    });
   },
   // ============================== DÍRA ==============================
-  async dira(browser) {
-    const page = await browser.newPage();
-
+  async Díra(page) {
     await page.goto(
       "https://www.prague-catering.cz/provozovny/jidelna-kantyna-praha/jidelna-denni-menu-praha-8/"
     );
 
-    console.log(
-      "Díra",
-      await page.evaluate(() => {
-        let insideMainCourses = false;
+    return page.evaluate(() => {
+      let insideMainCourses = false;
 
-        return Array.from(
-          document.querySelectorAll(".dennimenu tbody tr")
-        ).reduce((menu, row) => {
-          const cell = row.firstChild;
-          const heading =
-            cell.firstChild && cell.firstChild.tagName === "H3"
-              ? cell.firstChild
-              : null;
+      return Array.from(
+        document.querySelectorAll(".dennimenu tbody tr")
+      ).reduce((menu, row) => {
+        const cell = row.firstChild;
+        const heading =
+          cell.firstChild && cell.firstChild.tagName === "H3"
+            ? cell.firstChild
+            : null;
 
-          if (!heading) {
-            if (insideMainCourses) {
-              return [...menu, cell.textContent];
-            }
-
-            return menu;
+        if (!heading) {
+          if (insideMainCourses) {
+            return [...menu, cell.textContent];
           }
 
-          insideMainCourses = heading.textContent.includes("Hlavní");
-
           return menu;
-        }, []);
-      })
-    );
+        }
+
+        insideMainCourses = heading.textContent.includes("Hlavní");
+
+        return menu;
+      }, []);
+    });
   }
 };
 
@@ -133,7 +114,17 @@ const restaurants = {
   const browser = await puppeteer.launch();
 
   await Promise.all(
-    Object.values(restaurants).map(restaurant => restaurant(browser))
+    Object.entries(restaurants).map(async ([name, getMenu]) => {
+      try {
+        const page = await browser.newPage();
+        const menu = await getMenu(page);
+
+        console.info(name, menu);
+      } catch (error) {
+        console.error(`An error occurred when retrieving ${name} menu.`);
+        console.error(error);
+      }
+    })
   );
 
   await browser.close();
