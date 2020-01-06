@@ -23,6 +23,10 @@ const restaurants = {
       return (
         Array.from(document.querySelectorAll(".entry-content p")).reduce(
           (weeklyMenu, paragraph) => {
+            if (!paragraph.firstChild) {
+              return weeklyMenu;
+            }
+
             const content = paragraph.firstChild.textContent;
 
             if (daysOfWeek.includes(content)) {
