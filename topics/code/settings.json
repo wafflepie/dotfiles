@@ -1,4 +1,7 @@
 {
+  "[reason]": {
+    "editor.defaultFormatter": "jaredly.reason-vscode"
+  },
   "calva.lintOnSave": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -12,6 +15,7 @@
   "editor.formatOnSave": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.semanticHighlighting.enabled": false,
   "editor.snippetSuggestions": "top",
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
@@ -25,6 +29,14 @@
   },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/bower_components/**": true,
+    "**/dist/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true
+  },
   "git-autoconfig.configList": [
     {
       "user.email": "vaclav.janc@gmail.com",
@@ -61,16 +73,12 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "search.exclude": {
-    "**/.git": true,
-    "**/.nyc_output": true,
-    "**/android/.gradle": true,
-    "**/android/app/build": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
     "**/bower_components": true,
-    "**/coverage": true,
-    "**/dist": true,
-    "**/ios/build": true,
-    "**/node_modules": true,
-    "**/tmp": true
+    "**/dist/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true
   },
   "todo-tree.highlights.customHighlight": {
     "FIXME": {},
@@ -81,6 +89,7 @@
     "type": "none"
   },
   "todo-tree.tree.flat": true,
+  "todo-tree.tree.showScanModeButton": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 0,
   "workbench.editor.showTabs": true,
