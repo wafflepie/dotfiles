@@ -31,9 +31,6 @@
 [include]
   path = ~/.gitconfig.local
 
-[init]
-  templatedir = ~/.git-templates
-
 [merge]
   log = true
 
