@@ -17,6 +17,7 @@ export PROMPT_EOL_MARK=""
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$DOTFILES/binaries:$PATH"
 export PATH="./bin:$PATH"
 
