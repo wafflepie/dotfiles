@@ -1,1 +1,1 @@
-eval $(gdircolors -b $HOME/.dircolors)
+eval $(dircolors -b $HOME/.dircolors)
