@@ -1,7 +1,7 @@
 gitconfig_local_path="$HOME/.gitconfig.local"
 
 if ! [[ -f "$gitconfig_local_path" ]]; then
-  credential_helper='cache'
+  credential_helper='libsecret'
 
   if [[ "$(uname -s)" == "Darwin" ]]; then
     credential_helper='osxkeychain'
