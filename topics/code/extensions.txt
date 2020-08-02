@@ -2,9 +2,6 @@ akamud.vscode-theme-onedark
 christian-kohler.npm-intellisense
 clinyong.vscode-css-modules
 CoenraadS.bracket-pair-colorizer
-cospaia.calva-fmt
-cospaia.clojure4vscode
-cospaia.paredit-revived
 dbaeumer.vscode-eslint
 dcortes92.FreeMarker
 DigitalBrainstem.javascript-ejs-support
@@ -23,9 +20,7 @@ octref.vetur
 Prisma.vscode-graphql
 QzSG.kitty-time
 richie5um2.vscode-sort-json
-shinnn.stylelint
 shyykoserhiy.git-autoconfig
 silvenon.mdx
 VisualStudioExptTeam.vscodeintellicode
-WallabyJs.quokka-vscode
 zhouronghui.propertylist
