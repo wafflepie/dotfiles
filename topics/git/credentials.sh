@@ -1,3 +1,5 @@
+sudo dnf install git-credential-libsecret
+
 gitconfig_local_path="$HOME/.gitconfig.local"
 
 if ! [[ -f "$gitconfig_local_path" ]]; then
