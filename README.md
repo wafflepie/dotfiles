@@ -2,30 +2,20 @@
 
 The best ones out there, surely.
 
-## Features
-
-- A beautiful terminal and a gorgeous zsh theme.
-- Sane macOS defaults optimized for developers.
-- Useful binaries, tools, presets and aliases.
-- Automatic setup of `brew`, `git`, `nvm`, `jenv` and symlinks.
-- Effortless maintenance via the `dot` binary.
-- An extremely easy way of adding more config files and tools.
-
 **WARNING:** My dotfiles contain a LOT of stuff, most of which you probably don't need. Instead of using my repository directly, you should do a couple of things:
 
 - Create a fork.
 - Review the code. Seriously.
-- Go through `topics/brew/Brewfile` and remove any packages you do not want.
 - Remove any unneeded topics.
 
 ## Installation
 
-**NOTE:** These dotfiles are supposed to work on a clean installation of macOS. If they don't, open an issue and I'll look into it. Thanks!
+**NOTE:** These dotfiles are supposed to work on a minimal installation of Fedora 32.
 
 Run the following commands:
 
 ```sh
-# Replace `wafflepie` with your GitHub username
+# Replace `wafflepie` with your GitHub username if using a fork.
 git clone --recurse-submodules https://github.com/wafflepie/dotfiles.git ~/.dotfiles
 
 ~/.dotfiles/binaries/dot
