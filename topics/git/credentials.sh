@@ -1,6 +1,8 @@
 gitconfig_local_path="$HOME/.gitconfig.local"
 
 if ! [[ -f "$gitconfig_local_path" ]]; then
+  credential_helper='libsecret'
+
   echo 'enter your full name'
   read -e user_name
   echo 'enter your e-mail'
