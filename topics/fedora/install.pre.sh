@@ -13,13 +13,17 @@ sudo dnf install \
   @"Input Methods" \
   @Multimedia \
   @"Printing Support" \
+  baobab \
+  gnome-keyring \
+  gnome-keyring-pam \
   gnome-shell \
   gnome-terminal \
   gnome-tweaks \
   nautilus \
   NetworkManager-openvpn \
   NetworkManager-openvpn-gnome \
-  ranger
+  ranger \
+  seahorse \
 
 sudo dnf upgrade
 sudo dnf autoremove
