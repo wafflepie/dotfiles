@@ -1,0 +1,10 @@
+{
+  "name": "@waffle-x13y/touch-osk",
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^6.6.2"
+  },
+  "scripts": {
+    "start": "node ."
+  }
+}
