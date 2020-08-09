@@ -13,17 +13,26 @@ sudo dnf install \
   @"Input Methods" \
   @Multimedia \
   @"Printing Support" \
+  @Standard \
   baobab \
+  gnome-calculator \
+  gnome-disk-utility \
   gnome-keyring \
   gnome-keyring-pam \
   gnome-shell \
+  gnome-shell-extension-gpaste \
   gnome-terminal \
   gnome-tweaks \
+  gnome-weather \
+  gpaste \
+  htop \
   nautilus \
   NetworkManager-openvpn \
   NetworkManager-openvpn-gnome \
   ranger \
   seahorse \
+  tldr \
+  vlc \
 
 sudo dnf upgrade
 sudo dnf autoremove
