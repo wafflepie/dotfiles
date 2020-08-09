@@ -1,4 +1,0 @@
-#!/bin/sh
-
-sudo rm -rf $(xcode-select -print-path)
-xcode-select --install
