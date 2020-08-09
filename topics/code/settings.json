@@ -9,9 +9,9 @@
     "source.fixAll.eslint": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "FuraCode Nerd Font",
+  "editor.fontFamily": "FiraCode Nerd Font",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
+  "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
@@ -91,7 +91,7 @@
   "todo-tree.tree.flat": true,
   "todo-tree.tree.showScanModeButton": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "workbench.editor.showTabs": true,
   "workbench.startupEditor": "welcomePage"
 }

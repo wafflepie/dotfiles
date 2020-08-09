@@ -1,6 +1,5 @@
 fonts_directory="$HOME/.fonts"
 
-rm -rf "$fonts_directory"
 mkdir -p "$fonts_directory"
 
 urls=(
@@ -10,7 +9,11 @@ urls=(
 cd "$fonts_directory"
 
 for url in "$urls"; do
-  wget -q -O font.zip "$url" && unzip font.zip && rm font.zip
+  wget -q -O font.zip "$url" && unzip -o font.zip && rm font.zip
 done
+
+find . -iname "fura*" -delete
+find . -iname "*.ttf" -delete
+find . -iname "*Windows Compatible*" -delete
 
 fc-cache -fv "$fonts_directory"
