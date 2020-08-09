@@ -12,7 +12,7 @@ for url in "$urls"; do
   wget -q -O font.zip "$url" && unzip -o font.zip && rm font.zip
 done
 
-find . -iname "fura*" -delete
+find . -iname "Fura Code*" -delete
 find . -iname "*.ttf" -delete
 find . -iname "*Windows Compatible*" -delete
 
