@@ -21,17 +21,21 @@ sudo dnf install \
   gnome-keyring-pam \
   gnome-shell \
   gnome-shell-extension-appindicator \
+  gnome-shell-extension-dash-to-dock \
   gnome-shell-extension-drive-menu \
   gnome-shell-extension-gpaste \
   gnome-terminal \
   gnome-terminal-nautilus \
   gnome-tweaks \
   gnome-weather \
+  google-roboto-fonts \
   gpaste \
   htop \
+  materia-gtk-theme \
   nautilus \
   NetworkManager-openvpn \
   NetworkManager-openvpn-gnome \
+  papirus-icon-theme \
   ranger \
   seahorse \
   sqlite \
