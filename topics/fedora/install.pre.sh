@@ -20,8 +20,11 @@ sudo dnf install \
   gnome-keyring \
   gnome-keyring-pam \
   gnome-shell \
+  gnome-shell-extension-appindicator \
+  gnome-shell-extension-drive-menu \
   gnome-shell-extension-gpaste \
   gnome-terminal \
+  gnome-terminal-nautilus \
   gnome-tweaks \
   gnome-weather \
   gpaste \
@@ -31,6 +34,7 @@ sudo dnf install \
   NetworkManager-openvpn-gnome \
   ranger \
   seahorse \
+  sqlite \
   tldr \
   vlc \
 
