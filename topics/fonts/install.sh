@@ -16,4 +16,6 @@ find . -iname "Fura Code*" -delete
 find . -iname "*.ttf" -delete
 find . -iname "*Windows Compatible*" -delete
 
+sudo dnf install google-roboto-fonts
+
 fc-cache -fv "$fonts_directory"
