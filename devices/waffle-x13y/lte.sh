@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+if [[ "$1" = "down" ]]; then
+  sudo ip link set wwan0 down
+  exit
+fi
+
 cd ~/.dotfiles/devices/waffle-x13y/xmm7360-pci
 
 if [[ "$1" = "setup" ]]; then
