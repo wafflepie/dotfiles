@@ -4,3 +4,7 @@
 [submodule "submodules/git-blame-someone-else"]
 	path = submodules/git-blame-someone-else
 	url = https://github.com/jayphelps/git-blame-someone-else.git
+[submodule "devices/waffle-x13y/xmm7360-pci"]
+	path = devices/waffle-x13y/xmm7360-pci
+	url = https://github.com/xmm7360/xmm7360-pci
+  ignore = dirty
