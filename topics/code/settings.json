@@ -1,8 +1,4 @@
 {
-  "[reason]": {
-    "editor.defaultFormatter": "jaredly.reason-vscode"
-  },
-  "calva.lintOnSave": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.codeActionsOnSave": {
@@ -24,7 +20,6 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": false,
   "files.associations": {
-    "*.symlink": "shellscript",
     "Dockerfile*": "dockerfile"
   },
   "files.eol": "\n",
@@ -48,8 +43,9 @@
     }
   ],
   "git.autofetch": true,
-  "git.confirmSync": false,
-  "git.enableSmartCommit": true,
+  "git.confirmSync": true,
+  "git.enableSmartCommit": false,
+  "git.suggestSmartCommit": false,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -67,11 +63,6 @@
   "gitlens.views.lineHistory.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
-  "prettier.jsxBracketSameLine": false,
-  "prettier.printWidth": 100,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5",
   "search.exclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
@@ -80,17 +71,6 @@
     "**/node_modules/**": true,
     "**/tmp/**": true
   },
-  "todo-tree.highlights.customHighlight": {
-    "FIXME": {},
-    "TODO": {}
-  },
-  "todo-tree.highlights.defaultHighlight": {
-    "foreground": "green",
-    "type": "none"
-  },
-  "todo-tree.tree.flat": true,
-  "todo-tree.tree.showScanModeButton": false,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 1,
   "workbench.editor.showTabs": true,
   "workbench.startupEditor": "welcomePage"
