@@ -13,10 +13,4 @@ Add to `/etc/fonts/config.d/51-local.conf`.
     <family>Noto Color Emoji</family>
   </prefer>
 </alias>
-<alias>
-  <family>monospace</family>
-  <prefer>
-    <family>Noto Color Emoji</family>
-  </prefer>
-</alias>
 ```
