@@ -1,4 +1,4 @@
-Add to `/etc/fonts/config.d/51-local.conf`.
+Add to `/etc/fonts/conf.d/51-local.conf`.
 
 ```xml
 <alias>
