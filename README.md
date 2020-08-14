@@ -15,6 +15,8 @@ The best ones out there, surely.
 Run the following commands:
 
 ```sh
+sudo dnf install git
+
 # Replace `wafflepie` with your GitHub username if using a fork.
 git clone --recurse-submodules https://github.com/wafflepie/dotfiles.git ~/.dotfiles
 
