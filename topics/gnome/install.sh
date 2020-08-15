@@ -12,4 +12,6 @@ sudo dnf install \
   nautilus \
   seahorse \
 
+gsettings set org.gnome.nautilus.preferences click-policy single
+
 sudo systemctl set-default graphical.target
