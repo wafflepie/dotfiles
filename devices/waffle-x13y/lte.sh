@@ -8,6 +8,8 @@ fi
 cd ~/.dotfiles/devices/waffle-x13y/xmm7360-pci
 
 if [[ "$1" = "setup" ]]; then
+  sudo pip3 install pyroute2 --user
+  sudo pip3 install configargparse --user
   ln -s ~/.dotfiles/devices/waffle-x13y/lte.sh ~/.local/bin/lte
   make && make load
 fi
