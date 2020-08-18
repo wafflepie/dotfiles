@@ -17,7 +17,3 @@ sudo dnf install \
   @Multimedia \
   @"Printing Support" \
   @Standard \
-  sqlite \
-  tldr \
-
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
