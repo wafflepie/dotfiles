@@ -1,1 +1,1 @@
-flatpak install flathub com.spotify.Client
+snap install spotify

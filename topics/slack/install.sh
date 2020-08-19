@@ -1,1 +1,1 @@
-flatpak install flathub com.slack.Slack
+snap install slack --classic
