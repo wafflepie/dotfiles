@@ -1,1 +1,1 @@
-snap install slack --classic
+sudo snap install slack --classic

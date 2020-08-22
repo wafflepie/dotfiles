@@ -1,1 +1,1 @@
-snap install spotify
+sudo snap install spotify

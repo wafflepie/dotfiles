@@ -1,1 +1,1 @@
-snap install bitwarden
+sudo snap install bitwarden
