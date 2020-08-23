@@ -1,7 +1,1 @@
-[
-  {
-    "key": "cmd+k s",
-    "command": "-quokka.stopCurrent",
-    "when": "!quokka.isLiveShareClient && !terminalFocus"
-  }
-]
+[]
