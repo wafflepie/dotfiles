@@ -6,7 +6,7 @@ sudo dnf install rpmfusion-nonfree-release-tainted
 
 sudo dnf install fedora-workstation-repositories
 
-sudo dnf install \
+sudo dnf install -y \
   @base-x \
   @"C Development Tools and Libraries" \
   @"Common NetworkManager Submodules" \
