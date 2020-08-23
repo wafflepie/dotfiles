@@ -1,1 +1,2 @@
 fortune -a
+echo
