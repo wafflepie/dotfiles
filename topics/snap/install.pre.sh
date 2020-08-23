@@ -1,2 +1,5 @@
 sudo dnf install snapd
-sudo ln -s /var/lib/snapd/snap /snap
+
+if ! [[ -d /snap ]]; then
+  sudo ln -s /var/lib/snapd/snap /snap
+fi
