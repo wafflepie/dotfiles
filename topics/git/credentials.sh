@@ -1,9 +1,16 @@
-sudo dnf install git-credential-libsecret
+if ! is_wsl; then
+  sudo dnf install git-credential-libsecret
+fi
 
 gitconfig_local_path="$HOME/.gitconfig.local"
 
 if ! [[ -f "$gitconfig_local_path" ]]; then
-  credential_helper='libsecret'
+  if is_wsl; then
+    # TODO: Find a better headless solution.
+    credential_helper='store'
+  else
+    credential_helper='libsecret'
+  fi
 
   echo 'enter your full name'
   read -e user_name
