@@ -5,5 +5,9 @@ if ! grep -q "$zsh_path" /etc/shells; then
 fi
 
 if ! [[ "$SHELL" -ef "$zsh_path" ]]; then
-  chsh -s "$zsh_path"
+  if is_wsl; then
+    sudo lchsh -i "$(whoami)"
+  else
+    chsh -s "$zsh_path"
+  fi
 fi

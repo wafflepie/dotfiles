@@ -10,7 +10,7 @@ The best ones out there, surely.
 
 ## Installation
 
-**NOTE:** These dotfiles are supposed to work on a minimal installation of Fedora 32.
+**NOTE:** These dotfiles are supposed to work on a minimal installation of Fedora 32 or [Fedora Remix for WSL](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL).
 
 Run the following commands:
 

@@ -1,1 +1,3 @@
-sudo dnf install firefox
+if ! is_wsl; then
+  sudo dnf install firefox
+fi

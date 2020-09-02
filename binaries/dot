@@ -149,6 +149,10 @@ cd "$(dirname "$0")"
 export DOTFILES="$(git rev-parse --show-toplevel)"
 cd "$DOTFILES"
 
+is_wsl() {
+  grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null
+}
+
 directories=()
 for arg in "$@"; do
   if [[ "$arg" != -* ]] && [[ -d "topics/$arg" ]]; then

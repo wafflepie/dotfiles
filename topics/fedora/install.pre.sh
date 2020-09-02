@@ -6,14 +6,18 @@ sudo dnf install rpmfusion-nonfree-release-tainted
 
 sudo dnf install fedora-workstation-repositories
 
-sudo dnf install -y \
-  @base-x \
-  @"C Development Tools and Libraries" \
-  @"Common NetworkManager Submodules" \
-  @Core \
-  @Fonts \
-  @"Hardware Support" \
-  @"Input Methods" \
-  @Multimedia \
-  @"Printing Support" \
-  @Standard \
+if ! is_wsl; then
+  sudo dnf install -y \
+    @base-x \
+    @"C Development Tools and Libraries" \
+    @"Common NetworkManager Submodules" \
+    @Core \
+    @Fonts \
+    @"Hardware Support" \
+    @"Input Methods" \
+    @Multimedia \
+    @"Printing Support" \
+    @Standard
+fi
+
+sudo dnf install -y @"C Development Tools and Libraries"
