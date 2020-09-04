@@ -139,6 +139,10 @@ run_topic_script() {
   cd - > /dev/null
 }
 
+is_wsl() {
+  grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null
+}
+
 #####################
 ### END FUNCTIONS ###
 #####################
@@ -148,10 +152,6 @@ initial_directory="$(pwd)"
 cd "$(dirname "$0")"
 export DOTFILES="$(git rev-parse --show-toplevel)"
 cd "$DOTFILES"
-
-is_wsl() {
-  grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null
-}
 
 directories=()
 for arg in "$@"; do
