@@ -12,3 +12,7 @@ for extension in $extensions; do
     code --install-extension "$extension"
   fi
 done
+
+if is_wsl; then
+  cd - > /dev/null
+fi

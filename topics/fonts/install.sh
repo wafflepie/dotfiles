@@ -17,4 +17,5 @@ if ! is_wsl; then
   sudo dnf install google-roboto-fonts
 
   fc-cache -fv "$fonts_directory"
+  cd - > /dev/null
 fi

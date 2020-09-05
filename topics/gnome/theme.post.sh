@@ -17,5 +17,6 @@ if ! is_wsl; then
     git clone https://github.com/vinceliuice/vimix-gtk-themes.git "$vimix_path"
     cd "$vimix_path"
     ./install.sh
+    cd - > /dev/null
   fi
 fi
