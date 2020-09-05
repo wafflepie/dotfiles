@@ -1,3 +1,5 @@
 #!usr/bin/env bash
 
-code --list-extensions > extensions.txt
+if ! is_wsl; then
+  code --list-extensions > extensions.txt
+fi
