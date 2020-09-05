@@ -32,16 +32,6 @@
     "**/node_modules/**": true,
     "**/tmp/**": true
   },
-  "git-autoconfig.configList": [
-    {
-      "user.email": "vaclav.janc@gmail.com",
-      "user.name": "Václav Jančařík"
-    },
-    {
-      "user.email": "vaclav.jancarik@lundegaard.eu",
-      "user.name": "Václav Jančařík"
-    }
-  ],
   "git.autofetch": true,
   "git.confirmSync": true,
   "git.enableSmartCommit": false,
