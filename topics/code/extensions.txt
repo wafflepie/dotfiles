@@ -1,16 +1,11 @@
 christian-kohler.npm-intellisense
-clinyong.vscode-css-modules
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
-DotJoshJohnson.xml
 eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
 jpoissonnier.vscode-styled-components
-karyfoundation.nearley
 ms-azuretools.vscode-docker
 Prisma.vscode-graphql
 QzSG.kitty-time
 richie5um2.vscode-sort-json
-shyykoserhiy.git-autoconfig
-silvenon.mdx
