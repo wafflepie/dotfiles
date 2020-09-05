@@ -1,4 +1,4 @@
-if command -v code; then
+if command -v code /dev/null; then
   if is_wsl; then
     code_remote_directory="$HOME/.vscode-server"
     code_local_directory="$HOME/winhome/AppData/Roaming/Code"
