@@ -1,5 +1,10 @@
 #!usr/bin/env bash
 
-if ! is_wsl; then
+if is_wsl; then
+  # NOTE: This is purely to suppress warnings that UNC paths are not supported.
+  cd "$HOME/winhome"
+
+  cmd.exe /C 'code --list-extensions' > "$TOPIC/extensions.txt"
+else
   code --list-extensions > extensions.txt
 fi
