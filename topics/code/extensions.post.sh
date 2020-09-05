@@ -6,6 +6,8 @@ if is_wsl; then
 fi
 
 for extension in $extensions; do
+  # NOTE: It is still necessary to install some of the extensions in WSL too, but installing
+  # them in Windows simplifies the WSL installation, as they will appear in the Extensions tab.
   if is_wsl; then
     cmd.exe /C code --install-extension "$extension"
   else
