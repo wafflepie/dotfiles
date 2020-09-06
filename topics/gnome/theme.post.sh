@@ -1,4 +1,4 @@
-if ! is_wsl; then
+if ! is_wsl && is_fedora; then
   sudo dnf install \
     gnome-shell-extension-appindicator \
     gnome-shell-extension-dash-to-dock \
