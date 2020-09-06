@@ -1,1 +1,1 @@
-sudo dnf install python3 python3-devel
+sudo dnf install python3 python3-devel python3-pip
