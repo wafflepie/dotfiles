@@ -1,7 +1,7 @@
 if command -v code > /dev/null; then
   if is_wsl; then
     code_remote_directory="$HOME/.vscode-server"
-    code_local_directory="$HOME/winhome/AppData/Roaming/Code"
+    code_local_directory="$WINHOME/AppData/Roaming/Code"
 
     link_file "$TOPIC/settings.json" "$code_remote_directory/data/Machine/settings.json"
 

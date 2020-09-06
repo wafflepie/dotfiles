@@ -2,7 +2,7 @@
 
 if is_wsl; then
   # NOTE: This is purely to suppress warnings that UNC paths are not supported.
-  cd "$HOME/winhome"
+  cd /mnt/c
 
   cmd.exe /C 'code --list-extensions' > "$TOPIC/extensions.txt"
   cd - > /dev/null

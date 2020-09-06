@@ -10,13 +10,11 @@ The best ones out there, surely.
 
 ## Installation
 
-**NOTE:** These dotfiles are supposed to work on a minimal installation of Fedora 32 or [Fedora Remix for WSL](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL).
+**NOTE:** These dotfiles are supposed to work on a minimal installation of Fedora 32, [Fedora Remix for WSL](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL), and openSUSE Leap 15.2 for WSL.
 
-Run the following commands:
+Assuming that Git is already installed, run the following commands to initialize the dotfiles.
 
 ```sh
-sudo dnf install git
-
 # Replace `wafflepie` with your GitHub username if using a fork.
 git clone --recurse-submodules https://github.com/wafflepie/dotfiles.git ~/.dotfiles
 

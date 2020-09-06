@@ -25,7 +25,7 @@ dot_help() {
 }
 
 dot_dump() {
-  for script in $(find "${directories[@]}" -iname "Dumpfile"); do
+  for script in $(find "${topic_directories[@]}" -iname "Dumpfile"); do
     run_topic_script "$script";
   done
 }
@@ -33,9 +33,10 @@ dot_dump() {
 dot_chmod() {
   for file in $(
     find binaries -type f
-    find "${directories[@]}" -iname "*.sh"
-    find "${directories[@]}" -iname "*.zsh"
-    find "${directories[@]}" -iname "Dumpfile"
+    find distros -type f
+    find "${topic_directories[@]}" -iname "*.sh"
+    find "${topic_directories[@]}" -iname "*.zsh"
+    find "${topic_directories[@]}" -iname "Dumpfile"
   ); do
     chmod +x "$file"
   done
@@ -143,6 +144,14 @@ is_wsl() {
   grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null
 }
 
+is_fedora() {
+  cat /etc/os-release | grep -qi fedora
+}
+
+is_opensuse() {
+  cat /etc/os-release | grep -qi opensuse
+}
+
 #####################
 ### END FUNCTIONS ###
 #####################
@@ -153,15 +162,15 @@ cd "$(dirname "$0")"
 export DOTFILES="$(git rev-parse --show-toplevel)"
 cd "$DOTFILES"
 
-directories=()
+topic_directories=()
 for arg in "$@"; do
   if [[ "$arg" != -* ]] && [[ -d "topics/$arg" ]]; then
-    directories+=("topics/$arg")
+    topic_directories+=("topics/$arg")
   fi
 done
 
-if [[ -z "$directories" ]]; then
-  directories+=('topics')
+if [[ -z "$topic_directories" ]]; then
+  topic_directories+=('topics')
 fi
 
 case "$1" in
@@ -176,15 +185,19 @@ esac
 
 git submodule update --init --recursive
 
-for src in $(find "${directories[@]}" -name '.*' | grep -v '.DS_Store'); do
+for src in $(find "${topic_directories[@]}" -name '.*' | grep -v '.DS_Store'); do
   dst="$(basename "$src" | sed 's/+/\//g')"
   link_file "$DOTFILES/$src" "$HOME/$dst"
 done
 
+for distro in $(find "$DOTFILES/distros" -name '*.sh'); do
+  source "$distro"
+done
+
 for script in $(
-  find "${directories[@]}" -name '*.pre.sh'
-  find "${directories[@]}" -name '*.sh' ! -name '*.pre.sh' ! -name '*.post.sh'
-  find "${directories[@]}" -name '*.post.sh'
+  find "${topic_directories[@]}" -name '*.pre.sh'
+  find "${topic_directories[@]}" -name '*.sh' ! -name '*.pre.sh' ! -name '*.post.sh'
+  find "${topic_directories[@]}" -name '*.post.sh'
 ); do
   run_topic_script "$script"
 done
