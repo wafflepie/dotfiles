@@ -21,6 +21,6 @@ yarn global add \
   gulp \
   node-gyp \
   prettier \
-  puppeteer
+  puppeteer \
   serve \
   tldr \
