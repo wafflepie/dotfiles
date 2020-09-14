@@ -2,7 +2,7 @@
 
 The best ones out there, surely.
 
-**WARNING:** My dotfiles contain a LOT of stuff, most of which you probably don't need. Instead of using my repository directly, you should do a couple of things:
+**WARNING:** Instead of using my repository directly, you should do a couple of things:
 
 - Create a fork.
 - Review the code. Seriously.
@@ -10,11 +10,13 @@ The best ones out there, surely.
 
 ## Installation
 
-**NOTE:** These dotfiles are supposed to work on a minimal installation of openSUSE Leap 15.2 for WSL.
+**NOTE:** These dotfiles are supposed to work on a clean installation of openSUSE Leap 15.2 for WSL.
 
-Assuming that Git is already installed, run the following commands to initialize the dotfiles.
+Run the following commands to initialize the dotfiles.
 
 ```sh
+sudo zypper install git
+
 # Replace `wafflepie` with your GitHub username if using a fork.
 git clone --recurse-submodules https://github.com/wafflepie/dotfiles.git ~/.dotfiles
 
@@ -31,7 +33,7 @@ Any file in `/topics` beginning with a dot (such as `/topics/git/.gitconfig`) wi
 
 Any `.zsh` files in `/topics` will be automatically sourced in the `.zshrc` file. You can also name them `.pre.zsh` or `.post.zsh` if you need to source them in a certain order.
 
-**NOTE:** The `.post.zsh` files will be loaded AFTER all of the `antibody` plugins.
+**NOTE:** The `.post.zsh` files will be loaded after all of the `antibody` plugins.
 
 ### Initialization
 
@@ -45,6 +47,6 @@ Any topic may include a `Dumpfile`, denoting that it contains some files which a
 
 ## Maintenance
 
-Running `dot` will reinitialize your dotfiles, i.e. recreate symlinks and run all install scripts. Running `dot` SHOULD be [idempotent](https://en.wikipedia.org/wiki/Idempotence), so you can reinitialize as many times as you need to.
+Running `dot` will reinitialize your dotfiles, i.e. recreate symlinks and run all install scripts. Running `dot` should be [idempotent](https://en.wikipedia.org/wiki/Idempotence), so you can reinitialize as many times as you need to.
 
-If you only want to reinitialize some topics, run `dot topic1 topic2 topic3` instead.
+If you only want to reinitialize some topics, run `dot <topics>` instead, e.g. `dot nvm yarn`.
