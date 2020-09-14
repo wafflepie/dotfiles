@@ -1,7 +1,9 @@
 #!usr/bin/env bash
 
-# NOTE: This is purely to suppress warnings that UNC paths are not supported.
-cd /mnt/c
+if is_wsl; then
+  # NOTE: This is purely to suppress warnings that UNC paths are not supported.
+  cd /mnt/c
 
-cmd.exe /C 'code --list-extensions' > "$TOPIC/extensions.txt"
-cd - > /dev/null
+  cmd.exe /C 'code --list-extensions' > "$TOPIC/extensions.txt"
+  cd - > /dev/null
+fi

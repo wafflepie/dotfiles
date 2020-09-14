@@ -139,6 +139,10 @@ run_topic_script() {
   cd - > /dev/null
 }
 
+is_wsl() {
+  grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null
+}
+
 #####################
 ### END FUNCTIONS ###
 #####################
