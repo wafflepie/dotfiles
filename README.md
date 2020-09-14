@@ -45,6 +45,6 @@ Any topic may include a `Dumpfile`, denoting that it contains some files which a
 
 ## Maintenance
 
-Running `dot` will reinitialize your dotfiles, i.e. recreate symlinks and run all install scripts. Running `dot` SHOULD be [idemponent](https://en.wikipedia.org/wiki/Idempotence), so you can reinitialize as many times as you need to.
+Running `dot` will reinitialize your dotfiles, i.e. recreate symlinks and run all install scripts. Running `dot` SHOULD be [idempotent](https://en.wikipedia.org/wiki/Idempotence), so you can reinitialize as many times as you need to.
 
 If you only want to reinitialize some topics, run `dot topic1 topic2 topic3` instead.
