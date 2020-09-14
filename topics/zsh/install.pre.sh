@@ -1,1 +1,1 @@
-sudo dnf install zsh
+sudo zypper install zsh

@@ -1,1 +1,1 @@
-sudo dnf install vim-enhanced
+sudo zypper install vim-enhanced

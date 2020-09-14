@@ -33,7 +33,6 @@ dot_dump() {
 dot_chmod() {
   for file in $(
     find binaries -type f
-    find distros -type f
     find "${topic_directories[@]}" -iname "*.sh"
     find "${topic_directories[@]}" -iname "*.zsh"
     find "${topic_directories[@]}" -iname "Dumpfile"
@@ -140,18 +139,6 @@ run_topic_script() {
   cd - > /dev/null
 }
 
-is_wsl() {
-  grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null
-}
-
-is_fedora() {
-  cat /etc/os-release | grep -qi fedora
-}
-
-is_opensuse() {
-  cat /etc/os-release | grep -qi opensuse
-}
-
 #####################
 ### END FUNCTIONS ###
 #####################
@@ -188,10 +175,6 @@ git submodule update --init --recursive
 for src in $(find "${topic_directories[@]}" -name '.*' | grep -v '.DS_Store'); do
   dst="$(basename "$src" | sed 's/+/\//g')"
   link_file "$DOTFILES/$src" "$HOME/$dst"
-done
-
-for distro in $(find "$DOTFILES/distros" -name '*.sh'); do
-  source "$distro"
 done
 
 for script in $(

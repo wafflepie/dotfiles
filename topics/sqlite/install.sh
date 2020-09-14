@@ -1,1 +1,1 @@
-sudo dnf install sqlite
+sudo zypper install sqlite

@@ -1,1 +1,1 @@
-sudo dnf install neofetch
+sudo zypper install neofetch

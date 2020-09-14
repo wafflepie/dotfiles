@@ -1,1 +1,1 @@
-sudo dnf install which
+sudo zypper install which

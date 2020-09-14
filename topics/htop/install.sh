@@ -1,1 +1,1 @@
-sudo dnf install htop
+sudo zypper install htop

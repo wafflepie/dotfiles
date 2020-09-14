@@ -1,1 +1,1 @@
-sudo dnf install moreutils
+sudo zypper install moreutils

@@ -1,1 +1,1 @@
-sudo dnf install gcc
+sudo zypper install gcc

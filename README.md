@@ -10,7 +10,7 @@ The best ones out there, surely.
 
 ## Installation
 
-**NOTE:** These dotfiles are supposed to work on a minimal installation of Fedora 32, [Fedora Remix for WSL](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL), and openSUSE Leap 15.2 for WSL.
+**NOTE:** These dotfiles are supposed to work on a minimal installation of openSUSE Leap 15.2 for WSL.
 
 Assuming that Git is already installed, run the following commands to initialize the dotfiles.
 

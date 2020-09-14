@@ -1,1 +1,1 @@
-sudo dnf install bat
+sudo zypper install bat

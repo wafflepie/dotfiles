@@ -1,1 +1,1 @@
-sudo dnf install ripgrep
+sudo zypper install ripgrep
