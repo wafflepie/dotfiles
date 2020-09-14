@@ -1,8 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=Postman
-Exec=/opt/Postman/app/Postman %U
-Icon=postman
-Terminal=false
-Type=Application
-Categories=Development;
