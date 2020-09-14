@@ -1,4 +1,0 @@
-[submodule "devices/waffle-x13y/xmm7360-pci"]
-	path = devices/waffle-x13y/xmm7360-pci
-	url = https://github.com/xmm7360/xmm7360-pci
-  ignore = dirty
