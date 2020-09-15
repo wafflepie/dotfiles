@@ -5,5 +5,5 @@ if is_wsl; then
     sudo zypper install wslu
   fi
 
-  export WINHOME="$(wslpath "$(wslvar USERPROFILE)")"
+  source config.zsh
 fi
