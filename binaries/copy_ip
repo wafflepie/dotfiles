@@ -1,0 +1,3 @@
+#!/bin/sh
+
+hostname -I | awk '{print $1}' | clip.exe
