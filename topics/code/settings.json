@@ -2,7 +2,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "'FiraCode Nerd Font', 'FiraCode NF', Consolas, monospace",
@@ -15,6 +15,7 @@
   "editor.snippetSuggestions": "top",
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
+  "emmet.showExpandedAbbreviation": "never",
   "eslint.packageManager": "yarn",
   "eslint.validate": ["javascript", "javascriptreact", "vue", "html"],
   "explorer.confirmDragAndDrop": false,
@@ -51,6 +52,7 @@
   "gitlens.keymap": "chorded",
   "gitlens.views.fileHistory.enabled": false,
   "gitlens.views.lineHistory.enabled": false,
+  "javascript.autoClosingTags": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
   "search.exclude": {
