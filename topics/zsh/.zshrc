@@ -15,6 +15,9 @@ setopt PROMPT_CR
 setopt PROMPT_SP
 export PROMPT_EOL_MARK=""
 
+# NOTE: Fixes `git reset HEAD^`, see https://github.com/ohmyzsh/ohmyzsh/issues/449#issuecomment-6973326
+setopt NO_NOMATCH
+
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
