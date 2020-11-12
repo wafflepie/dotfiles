@@ -21,7 +21,8 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": false,
   "files.associations": {
-    "Dockerfile*": "dockerfile"
+    "Dockerfile*": "dockerfile",
+    ".env*": "shellscript"
   },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
