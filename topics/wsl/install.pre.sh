@@ -6,4 +6,7 @@ if is_wsl; then
   fi
 
   source config.zsh
+
+  sudo rm -f /etc/wsl.conf
+  sudo cp "$TOPIC/wsl.conf" /etc/wsl.conf
 fi
