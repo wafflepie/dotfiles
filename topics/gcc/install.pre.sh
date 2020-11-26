@@ -1,1 +1,1 @@
-sudo zypper install gcc
+sudo apt install gcc

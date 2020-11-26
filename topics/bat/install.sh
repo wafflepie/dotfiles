@@ -1,1 +1,1 @@
-sudo zypper install bat
+sudo apt install bat

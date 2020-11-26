@@ -1,1 +1,1 @@
-sudo zypper install lsof
+sudo apt install lsof

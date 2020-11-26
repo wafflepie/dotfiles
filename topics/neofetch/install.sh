@@ -1,1 +1,1 @@
-sudo zypper install neofetch
+sudo apt install neofetch

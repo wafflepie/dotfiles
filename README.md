@@ -10,13 +10,11 @@ The best ones out there, surely.
 
 ## Installation
 
-**NOTE:** These dotfiles are supposed to work on a clean installation of openSUSE Leap 15.2 for WSL.
+**NOTE:** These dotfiles are supposed to work on a clean installation of Ubuntu for WSL.
 
 Run the following commands to initialize the dotfiles.
 
 ```sh
-sudo zypper install git
-
 # Replace `wafflepie` with your GitHub username if using a fork.
 git clone --recurse-submodules https://github.com/wafflepie/dotfiles.git ~/.dotfiles
 

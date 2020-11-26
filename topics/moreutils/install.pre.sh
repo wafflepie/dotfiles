@@ -1,1 +1,1 @@
-sudo zypper install moreutils
+sudo apt install moreutils

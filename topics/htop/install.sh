@@ -1,1 +1,1 @@
-sudo zypper install htop
+sudo apt install htop

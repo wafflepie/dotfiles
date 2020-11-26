@@ -1,1 +1,1 @@
-sudo zypper install sqlite
+sudo apt install sqlite

@@ -1,1 +1,1 @@
-pip install thefuck --user
+pip3 install thefuck

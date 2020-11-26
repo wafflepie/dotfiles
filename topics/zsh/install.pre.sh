@@ -1,1 +1,1 @@
-sudo zypper install zsh
+sudo apt install zsh
