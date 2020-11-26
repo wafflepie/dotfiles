@@ -2,9 +2,13 @@
   su = stash -u
   sp = stash pop
 
+[branch]
+  autosetupmerge = true
+
 [core]
-  excludesfile = ~/.gitignore
+  commentchar = auto
   editor = vim
+  excludesfile = ~/.gitignore
 
 [help]
   autocorrect = 1
@@ -18,6 +22,3 @@
 [push]
   default = simple
   followtags = true
-
-[branch]
-  autosetupmerge = true
