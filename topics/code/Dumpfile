@@ -7,3 +7,7 @@ if is_wsl; then
   cmd.exe /C 'code --list-extensions' > "$TOPIC/extensions.txt"
   cd - > /dev/null
 fi
+
+if is_mac; then
+  code --list-extensions > extensions.txt
+fi

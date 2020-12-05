@@ -12,3 +12,11 @@ if is_wsl && command -v code > /dev/null; then
   rm -rf "$code_local_directory/User/snippets"
   cp -r "$TOPIC/snippets" "$code_local_directory/User"
 fi
+
+if is_mac; then
+  code_directory="$HOME/Library/Application Support/Code"
+
+  link_file "$TOPIC/settings.json" "$code_directory/User/settings.json"
+  link_file "$TOPIC/keybindings.json" "$code_directory/User/keybindings.json"
+  link_file "$TOPIC/snippets" "$code_directory/User/snippets"
+fi

@@ -12,3 +12,9 @@ if is_wsl; then
 
   cd - > /dev/null
 fi
+
+if is_mac; then
+  for extension in $(cat extensions.txt); do
+    code --install-extension "$extension"
+  done
+fi
