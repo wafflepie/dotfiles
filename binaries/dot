@@ -139,10 +139,6 @@ run_topic_script() {
   cd - > /dev/null
 }
 
-is_wsl() {
-  grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null
-}
-
 #####################
 ### END FUNCTIONS ###
 #####################
@@ -151,6 +147,7 @@ set -e
 initial_directory="$(pwd)"
 cd "$(dirname "$0")"
 export DOTFILES="$(git rev-parse --show-toplevel)"
+export PATH="$DOTFILES/binaries:$PATH"
 cd "$DOTFILES"
 
 topic_directories=()

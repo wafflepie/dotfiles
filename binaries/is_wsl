@@ -1,0 +1,3 @@
+#!/bin/sh
+
+grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null
