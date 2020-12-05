@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null
