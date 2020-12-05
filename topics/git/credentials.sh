@@ -3,6 +3,8 @@ gitconfig_local_path="$HOME/.gitconfig.local"
 if ! [[ -f "$gitconfig_local_path" ]]; then
   if is_wsl; then
     credential_helper='\/mnt\/c\/Program\\\\ Files\/Git\/mingw64\/libexec\/git-core\/git-credential-manager.exe'
+  elif is_mac; then
+    credential_helper='osxkeychain'
   else
     credential_helper='store'
   fi
