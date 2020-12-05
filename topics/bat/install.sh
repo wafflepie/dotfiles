@@ -1,1 +1,3 @@
-sudo apt install bat
+if is_wsl; then
+  sudo apt install bat
+fi

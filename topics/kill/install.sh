@@ -1,1 +1,3 @@
-sudo apt install lsof
+if is_wsl; then
+  sudo apt install lsof
+fi

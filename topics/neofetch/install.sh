@@ -1,1 +1,3 @@
-sudo apt install neofetch
+if is_wsl; then
+  sudo apt install neofetch
+fi
