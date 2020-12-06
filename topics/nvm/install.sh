@@ -3,7 +3,6 @@ if ! [[ -d "$HOME/.nvm" ]]; then
   install_default_node=true
 fi
 
-# We always initialize nvm because of other topics, such as yarn/install.sh
 export NVM_DIR="$HOME/.nvm"
 source "$NVM_DIR/nvm.sh"
 
