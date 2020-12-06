@@ -13,7 +13,7 @@ if is_wsl && command -v code > /dev/null; then
   cp -r "$TOPIC/snippets" "$code_local_directory/User"
 fi
 
-if is_mac; then
+if is_macos; then
   code_directory="$HOME/Library/Application Support/Code"
 
   link_file "$TOPIC/settings.json" "$code_directory/User/settings.json"

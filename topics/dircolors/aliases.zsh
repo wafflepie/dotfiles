@@ -2,7 +2,7 @@ if is_wsl; then
   alias ls='ls --color=auto'
 fi
 
-if is_mac; then
+if is_macos; then
   alias ls='gls --color=auto'
 fi
 

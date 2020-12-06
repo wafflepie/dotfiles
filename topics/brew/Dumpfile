@@ -1,5 +1,5 @@
 #!usr/bin/env bash
 
-if is_mac; then
+if is_macos; then
   brew bundle dump --force
 fi

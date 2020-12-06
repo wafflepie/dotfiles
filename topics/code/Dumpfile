@@ -8,6 +8,6 @@ if is_wsl; then
   cd - > /dev/null
 fi
 
-if is_mac; then
+if is_macos; then
   code --list-extensions > extensions.txt
 fi
