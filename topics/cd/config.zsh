@@ -1,4 +1,4 @@
-setopt auto_cd # `cd` by typing directory name if it's not a command
+setopt auto_cd # NOTE: `cd` by typing directory name if it's not a command.
 
 alias ...='../..'
 alias ....='../../..'
