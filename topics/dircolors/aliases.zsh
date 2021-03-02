@@ -1,4 +1,4 @@
-if is_wsl; then
+if ! is_macos; then
   alias ls='ls --color=auto'
 fi
 

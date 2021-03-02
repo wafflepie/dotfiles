@@ -1,4 +1,4 @@
-if is_wsl; then
+if ! is_macos; then
   eval $(dircolors -b $HOME/.dircolors)
 fi
 
