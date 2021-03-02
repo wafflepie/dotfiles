@@ -1,3 +1,7 @@
+if ! is_wsl && is_fedora; then
+  sudo dnf install git-credential-libsecret
+fi
+
 gitconfig_local_path="$HOME/.gitconfig.local"
 
 if ! [[ -f "$gitconfig_local_path" ]]; then
@@ -5,6 +9,8 @@ if ! [[ -f "$gitconfig_local_path" ]]; then
     credential_helper='\/mnt\/c\/Program\\\\ Files\/Git\/mingw64\/libexec\/git-core\/git-credential-manager.exe'
   elif is_macos; then
     credential_helper='osxkeychain'
+  elif is_fedora; then
+    credential_helper='libsecret'
   else
     credential_helper='store'
   fi
