@@ -17,12 +17,12 @@
   "editor.tabSize": 2,
   "emmet.showExpandedAbbreviation": "never",
   "eslint.packageManager": "yarn",
-  "eslint.validate": ["javascript", "javascriptreact", "vue", "html"],
+  "eslint.validate": ["javascript", "javascriptreact"],
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": false,
   "files.associations": {
-    "Dockerfile*": "dockerfile",
-    ".env*": "shellscript"
+    ".env*": "shellscript",
+    "Dockerfile*": "dockerfile"
   },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
