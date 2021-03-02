@@ -22,3 +22,6 @@
 [push]
   default = simple
   followtags = true
+
+[submodule]
+	recurse = true
