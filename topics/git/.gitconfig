@@ -19,6 +19,9 @@
 [merge]
   log = true
 
+[pull]
+  rebase = true
+
 [push]
   default = simple
   followtags = true
