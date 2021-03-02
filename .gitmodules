@@ -1,0 +1,4 @@
+[submodule "submodules/xmm7360-pci"]
+	path = submodules/xmm7360-pci
+	url = https://github.com/xmm7360/xmm7360-pci
+  ignore = dirty
