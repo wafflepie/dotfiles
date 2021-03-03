@@ -6,10 +6,13 @@ if ! is_wsl && is_fedora; then
     gnome-keyring \
     gnome-keyring-pam \
     gnome-shell \
+    gnome-shell-extension-appindicator \
+    gnome-shell-extension-dash-to-dock \
+    gnome-shell-extension-drive-menu \
+    gnome-shell-extension-user-theme \
     gnome-terminal \
     gnome-terminal-nautilus \
-    gnome-weather \
-    gpaste \
+    gnome-tweaks \
     nautilus \
     seahorse \
 
