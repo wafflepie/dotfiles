@@ -2,12 +2,12 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll.eslint": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "'FiraCode Nerd Font', 'FiraCode NF', Consolas, monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
+  "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
@@ -38,21 +38,6 @@
   "git.confirmSync": true,
   "git.enableSmartCommit": false,
   "git.suggestSmartCommit": false,
-  "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": true,
-    "suppressWelcomeNotice": true
-  },
-  "gitlens.keymap": "chorded",
-  "gitlens.views.fileHistory.enabled": false,
-  "gitlens.views.lineHistory.enabled": false,
   "javascript.autoClosingTags": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
@@ -64,6 +49,8 @@
     "**/node_modules/**": true,
     "**/tmp/**": true
   },
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "window.zoomLevel": 1,
   "workbench.editor.showTabs": true,
   "workbench.startupEditor": "welcomePage"
 }
