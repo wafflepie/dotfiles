@@ -10,13 +10,11 @@ The best ones out there, surely.
 
 ## Installation
 
-**NOTE:** These dotfiles are supposed to work on a clean installation of Ubuntu for WSL.
+**NOTE:** These dotfiles are supposed to work on a minimal installation of Fedora, macOS, and Ubuntu for WSL.
 
-Run the following commands to initialize the dotfiles.
+Assuming that Git is already installed, run the following commands to initialize the dotfiles.
 
 ```sh
-sudo apt update
-
 # Replace `wafflepie` with your GitHub username if using a fork.
 git clone --recurse-submodules https://github.com/wafflepie/dotfiles.git ~/.dotfiles
 
