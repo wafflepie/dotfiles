@@ -1,18 +1,20 @@
-#!/usr/bin/bash
+SCRIPT_PATH=$(readlink -f $0)
+SCRIPT_DIR=`dirname $SCRIPT_PATH`
 
-if [[ "$1" = "down" ]]; then
-  sudo ip link set wwan0 down
-  exit
+cd "$SCRIPT_DIR/../../submodules/xmm7360-pci"
+
+if [[ ! -f xmm7360.ini ]]; then
+  cp xmm7360.ini.sample xmm7360.ini
+  sed -i 's/your.apn.here/internet.t-mobile.cz/' xmm7360.ini
 fi
 
-cd ~/.dotfiles/submodules/xmm7360-pci
+sudo ./scripts/lte.sh setup
+sudo lte up
 
-if [[ "$1" = "setup" ]]; then
-  sudo pip3 install pyroute2 --user
-  sudo pip3 install configargparse --user
-  ln -s ~/.dotfiles/devices/waffle-x13y/lte.sh ~/.local/bin/lte
-  make && make load
+sudo resolvectl dns wwan0 8.8.8.8
+
+TARGET_PATH=~/.local/bin/fuck-dsl
+
+if [[ ! -f "$TARGET_PATH" ]]; then
+  ln -s "$SCRIPT_PATH" ~/.local/bin/fuck-dsl
 fi
-
-sudo python3 rpc/open_xdatachannel.py --apn internet.t-mobile.cz
-cd - > /dev/null
