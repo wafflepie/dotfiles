@@ -16,5 +16,5 @@ sudo resolvectl dns wwan0 8.8.8.8
 TARGET_PATH=~/.local/bin/fuck-dsl
 
 if [[ ! -f "$TARGET_PATH" ]]; then
-  ln -s "$SCRIPT_PATH" ~/.local/bin/fuck-dsl
+  ln -s "$SCRIPT_PATH" "$TARGET_PATH"
 fi
