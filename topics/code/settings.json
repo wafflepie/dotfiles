@@ -12,12 +12,11 @@
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.semanticHighlighting.enabled": false,
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "inline",
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "emmet.showExpandedAbbreviation": "never",
   "eslint.packageManager": "yarn",
-  "eslint.validate": ["javascript", "javascriptreact"],
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": false,
   "files.associations": {
@@ -26,14 +25,6 @@
   },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
-  "files.watcherExclude": {
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/bower_components/**": true,
-    "**/dist/**": true,
-    "**/node_modules/**": true,
-    "**/tmp/**": true
-  },
   "git.autofetch": true,
   "git.confirmSync": true,
   "git.enableSmartCommit": false,
@@ -41,15 +32,8 @@
   "javascript.autoClosingTags": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
-  "search.exclude": {
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/bower_components": true,
-    "**/dist/**": true,
-    "**/node_modules/**": true,
-    "**/tmp/**": true
-  },
-  "typescript.preferences.importModuleSpecifier": "shortest",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.updateImportsOnFileMove.enabled": "never",
   "window.zoomLevel": 1,
   "workbench.editor.showTabs": true,
   "workbench.startupEditor": "welcomePage"
