@@ -5,5 +5,4 @@ zsh-users/zsh-completions
 buonomo/yarn-completion
 robbyrussell/oh-my-zsh path:plugins/z
 romkatv/powerlevel10k
-robbyrussell/oh-my-zsh path:plugins/thefuck
 lukechilds/zsh-nvm
