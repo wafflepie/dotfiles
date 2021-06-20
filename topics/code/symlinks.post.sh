@@ -9,8 +9,6 @@ if is_wsl && command -v code > /dev/null; then
   # Ideally, we would just symlink the files to Windows so they'd be used in WSL too.
   cp "$TOPIC/settings.json" "$code_local_directory/User/settings.json"
   cp "$TOPIC/keybindings.json" "$code_local_directory/User/keybindings.json"
-  rm -rf "$code_local_directory/User/snippets"
-  cp -r "$TOPIC/snippets" "$code_local_directory/User"
 fi
 
 if is_macos; then
@@ -18,7 +16,6 @@ if is_macos; then
 
   link_file "$TOPIC/settings.json" "$code_directory/User/settings.json"
   link_file "$TOPIC/keybindings.json" "$code_directory/User/keybindings.json"
-  link_file "$TOPIC/snippets" "$code_directory/User/snippets"
 fi
 
 if ! is_wsl && is_fedora; then
@@ -26,5 +23,4 @@ if ! is_wsl && is_fedora; then
 
   link_file "$TOPIC/settings.json" "$code_directory/User/settings.json"
   link_file "$TOPIC/keybindings.json" "$code_directory/User/keybindings.json"
-  link_file "$TOPIC/snippets" "$code_directory/User/snippets"
 fi
