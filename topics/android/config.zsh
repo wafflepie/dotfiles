@@ -7,3 +7,10 @@ winavd() {
   cmd.exe /C "emulator -avd $@"
   cd - > /dev/null
 }
+
+winadb() {
+  # NOTE: This is purely to suppress warnings that UNC paths are not supported.
+  cd /mnt/c
+  cmd.exe /C "adb $@"
+  cd - > /dev/null
+}
