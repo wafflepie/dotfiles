@@ -7,7 +7,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "'FiraCode Nerd Font', 'FiraCode NF', Consolas, monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 13,
+  "editor.fontSize": 15,
   "editor.formatOnSave": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
@@ -34,7 +34,6 @@
   "javascript.validate.enable": false,
   "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.updateImportsOnFileMove.enabled": "never",
-  "window.zoomLevel": 1,
   "workbench.editor.showTabs": true,
   "workbench.startupEditor": "welcomePage"
 }
