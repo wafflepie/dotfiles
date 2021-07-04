@@ -1,7 +1,20 @@
 # BEGIN DOTFILES
+172.30.11.11 17588-json-preview.ocb.cbs
+172.30.11.11 17502-ui-client.ocb.cbs
+172.30.11.11 27588-json-preview.ocb.cbs
+172.30.11.11 27502-ui-client.ocb.cbs
+172.30.11.11 27509-ids-client.ocb.cbs
+172.30.11.11 7502-ui-release.ocb.cbs
+172.30.11.11 7588-json-release.ocb.cbs
+172.30.11.11 7509-ids-release.ocb.cbs
+172.30.11.11 btm-rc.ocb.cbs
+172.30.11.11 btm-prev.ocb.cbs
+172.30.11.11 btm.ocb.cbs
+172.30.11.11 appmultiwaf.ocb.cbs
 172.30.11.65 appmyci
 172.30.11.84 cb5-preview
 172.30.11.85 cb5-release
 172.30.11.86 cb5-client
+172.30.11.108 cishd-omn-web01
 # END DOTFILES
 
