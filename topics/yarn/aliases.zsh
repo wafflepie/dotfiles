@@ -12,3 +12,13 @@ alias yad="ya --dev"
 alias yap="ya --peer"
 alias yui='y upgrade-interactive --latest'
 alias lm='(ls -l node_modules; ls -l node_modules/@*) | grep ^l'
+
+yse() {
+  yarn set-env "$1"
+  yarn start
+}
+
+yyse() {
+  yarn
+  yse "$1"
+}
