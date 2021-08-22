@@ -3,6 +3,7 @@ topics/ssh/.ssh+id_rsa
 # END PRIVATE
 
 private.tar.gz
+Brewfile.lock.json
 
 # Created by https://www.gitignore.io/api/vim,code,linux,macos
 
