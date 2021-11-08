@@ -16,5 +16,8 @@
 172.30.11.85 cb5-release
 172.30.11.86 cb5-client
 172.30.11.108 cishd-omn-web01
+172.30.19.10 cbs-nord-web1
+172.30.19.13 cbs-nord-app1
+172.30.30.25 is-nord
 # END DOTFILES
 
