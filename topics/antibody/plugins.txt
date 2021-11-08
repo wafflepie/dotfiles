@@ -1,5 +1,5 @@
 zsh-users/zsh-autosuggestions
-zdharma/fast-syntax-highlighting
+zdharma-continuum/fast-syntax-highlighting
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-completions
 buonomo/yarn-completion
