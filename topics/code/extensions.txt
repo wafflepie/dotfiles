@@ -1,5 +1,4 @@
 christian-kohler.npm-intellisense
-CoenraadS.bracket-pair-colorizer-2
 dbaeumer.vscode-eslint
 eamodio.gitlens
 EditorConfig.EditorConfig
