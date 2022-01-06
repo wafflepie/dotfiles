@@ -4,5 +4,7 @@ eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
 GraphQL.vscode-graphql
+ms-azuretools.vscode-docker
+ms-vscode-remote.remote-containers
 ms-vscode-remote.remote-wsl
 richie5um2.vscode-sort-json
