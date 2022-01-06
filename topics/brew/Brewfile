@@ -8,6 +8,7 @@ brew "glib"
 brew "coreutils"
 brew "git"
 brew "imagemagick"
+brew "mas"
 brew "moreutils"
 brew "neofetch"
 brew "poppler"
@@ -32,3 +33,6 @@ cask "spotify"
 cask "telegram"
 cask "visual-studio-code"
 cask "vlc"
+mas "Magnet", id: 441258766
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "SonicWall Mobile Connect", id: 822514576
