@@ -8,7 +8,4 @@ if is_macos; then
   # NOTE: Require password immediately after sleep or screen saver begins.
   defaults write com.apple.screensaver askForPassword -int 1
   defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-  # NOTE: Reveal useful information upon clicking the clock in the login window.
-  sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 fi

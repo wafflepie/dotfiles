@@ -9,15 +9,15 @@ if is_macos; then
   defaults write NSGlobalDomain KeyRepeat -int 2
   defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-  # NOTE: Disable automatic capitalization as it's annoying when typing code.
+  # NOTE: Disable automatic capitalization.
   defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
-  # NOTE: Disable smart dashes as they're annoying when typing code.
+  # NOTE: Disable smart dashes.
   defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-  # NOTE: Disable automatic period substitution as it's annoying when typing code.
+  # NOTE: Disable automatic period substitution.
   defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
-  # NOTE: Disable smart quotes as they're annoying when typing code.
+  # NOTE: Disable smart quotes.
   defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 fi
