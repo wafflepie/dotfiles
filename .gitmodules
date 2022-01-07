@@ -2,3 +2,27 @@
 	path = submodules/xmm7360-pci
 	url = https://github.com/xmm7360/xmm7360-pci
   ignore = dirty
+[submodule "submodules/zsh-autosuggestions"]
+	path = submodules/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "submodules/fast-syntax-highlighting"]
+	path = submodules/fast-syntax-highlighting
+	url = https://github.com/zdharma-continuum/fast-syntax-highlighting.git
+[submodule "submodules/zsh-history-substring-search"]
+	path = submodules/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search.git
+[submodule "submodules/zsh-completions"]
+	path = submodules/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git
+[submodule "submodules/yarn-completion"]
+	path = submodules/yarn-completion
+	url = https://github.com/buonomo/yarn-completion.git
+[submodule "submodules/oh-my-zsh"]
+	path = submodules/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "submodules/powerlevel10k"]
+	path = submodules/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "submodules/zsh-nvm"]
+	path = submodules/zsh-nvm
+	url = https://github.com/lukechilds/zsh-nvm.git

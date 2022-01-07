@@ -1,8 +1,16 @@
-zsh-users/zsh-autosuggestions
-zdharma-continuum/fast-syntax-highlighting
-zsh-users/zsh-history-substring-search
-zsh-users/zsh-completions
-buonomo/yarn-completion
-robbyrussell/oh-my-zsh path:plugins/z
-romkatv/powerlevel10k
-lukechilds/zsh-nvm
+source ~/.dotfiles/submodules/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+fpath+=(~/.dotfiles/submodules/zsh-autosuggestions )
+source ~/.dotfiles/submodules/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+fpath+=(~/.dotfiles/submodules/fast-syntax-highlighting )
+source ~/.dotfiles/submodules/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+fpath+=(~/.dotfiles/submodules/zsh-history-substring-search )
+source ~/.dotfiles/submodules/zsh-completions/zsh-completions.plugin.zsh
+fpath+=(~/.dotfiles/submodules/zsh-completions )
+source ~/.dotfiles/submodules/yarn-completion/yarn-completion.plugin.zsh
+fpath+=(~/.dotfiles/submodules/yarn-completion )
+source ~/.dotfiles/submodules/oh-my-zsh/plugins/z/z.plugin.zsh
+fpath+=(~/.dotfiles/submodules/oh-my-zsh/plugins/z )
+source ~/.dotfiles/submodules/powerlevel10k/powerlevel10k.zsh-theme
+fpath+=(~/.dotfiles/submodules/powerlevel10k )
+source ~/.dotfiles/submodules/zsh-nvm/zsh-nvm.plugin.zsh
+fpath+=(~/.dotfiles/submodules/zsh-nvm )
