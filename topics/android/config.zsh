@@ -1,5 +1,10 @@
-export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
-export ANDROID_SDK="$HOME/Android/Sdk"
+if is_macos; then
+  export ANDROID_SDK="$HOME/Library/Android/sdk"
+else
+  export ANDROID_SDK="$HOME/Android/Sdk"
+fi
+
+export PATH="$ANDROID_SDK/platform-tools:$PATH"
 
 winavd() {
   # NOTE: This is purely to suppress warnings that UNC paths are not supported.
