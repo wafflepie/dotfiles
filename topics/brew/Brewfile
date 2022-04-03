@@ -12,11 +12,13 @@ brew "mas"
 brew "moreutils"
 brew "neofetch"
 brew "poppler"
+brew "watchman"
 brew "wget"
 brew "yarn"
 brew "youtube-dl"
 brew "zsh"
 cask "alfred"
+cask "android-studio"
 cask "bitwarden"
 cask "discord"
 cask "docker"
@@ -31,8 +33,16 @@ cask "microsoft-teams"
 cask "postman"
 cask "spotify"
 cask "telegram"
+cask "temurin8"
+cask "ukelele"
 cask "visual-studio-code"
 cask "vlc"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "SonicWall Mobile Connect", id: 822514576
+mas "Xcode", id: 497799835
