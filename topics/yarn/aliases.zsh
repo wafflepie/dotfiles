@@ -12,6 +12,8 @@ alias yad="ya --dev"
 alias yap="ya --peer"
 alias yui='y upgrade-interactive --latest'
 alias lm='(ls -l node_modules; ls -l node_modules/@*) | grep ^l'
+alias ysb='y start:storybook'
+alias yysb='y && ysb'
 
 yse() {
   yarn set-env "$1"
