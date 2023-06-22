@@ -3,8 +3,13 @@ dbaeumer.vscode-eslint
 eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
+firefox-devtools.vscode-firefox-debug
 GraphQL.vscode-graphql
+GraphQL.vscode-graphql-execution
+GraphQL.vscode-graphql-syntax
 ms-azuretools.vscode-docker
 ms-vscode-remote.remote-containers
 ms-vscode-remote.remote-wsl
+ms-vsliveshare.vsliveshare
+naumovs.color-highlight
 richie5um2.vscode-sort-json

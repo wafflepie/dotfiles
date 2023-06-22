@@ -1,5 +1,5 @@
 {
-  "diffEditor.ignoreTrimWhitespace": false,
+  "color-highlight.markerType": "dot-before",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
@@ -29,12 +29,13 @@
   "git.autofetch": true,
   "git.confirmSync": true,
   "git.enableSmartCommit": false,
+  "git.pullTags": false,
   "git.suggestSmartCommit": false,
   "javascript.autoClosingTags": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
   "typescript.preferences.importModuleSpecifier": "project-relative",
   "typescript.updateImportsOnFileMove.enabled": "never",
-  "workbench.editor.showTabs": true,
+  "workbench.colorTheme": "Default Dark+",
   "workbench.startupEditor": "welcomePage"
 }
