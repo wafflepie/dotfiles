@@ -1,5 +1,5 @@
 {
-  "diffEditor.ignoreTrimWhitespace": false,
+  "color-highlight.markerType": "dot-before",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
@@ -36,5 +36,6 @@
   "javascript.validate.enable": false,
   "typescript.preferences.importModuleSpecifier": "project-relative",
   "typescript.updateImportsOnFileMove.enabled": "never",
+  "workbench.colorTheme": "Default Dark+",
   "workbench.startupEditor": "welcomePage"
 }
